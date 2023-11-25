@@ -7,4 +7,11 @@
 
 import Foundation
 
-// struct
+struct AnnounceRequestModel: Codable {
+    let meetingId: String
+    let content: String
+}
+
+struct AnnounceResponseModel: Codable {
+    
+}

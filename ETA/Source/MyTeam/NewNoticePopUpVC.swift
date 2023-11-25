@@ -142,14 +142,23 @@ class NewNoticePopUpVC: UIViewController {
     
     /// 확인 버튼 눌렀을 때
     @objc func didUploadButtonTapped() {
+        let data = AnnounceRequestModel(meetingId: "id222", content: noticeTextView.text)
         
-//        APIManager.shared.postData(
-//            urlEndpointString: Constant.postAnnouncement,
-//            responseDataType: <#T##Decodable.Protocol#>,
-//            requestDataType: <#T##(Decodable & Encodable).Protocol#>,
-//            parameter: <#T##(Decodable & Encodable)?#>,
-//            completionHandler: <#T##(Decodable) -> Void#>)
-        self.dismiss(animated: true)
+        APIManager.shared.postData(
+            urlEndpointString: Constant.postAnnouncement,
+            responseDataType: APIModel<AnnounceResponseModel>?.self,
+            requestDataType: AnnounceRequestModel.self,
+            parameter: data) { response in
+                if (response?.isSuccess) != nil {
+                    print("게시 성공")
+                    print(response!)
+                }
+                else {
+                    print("게시 실패")
+                    print(response!)
+                }
+                self.dismiss(animated: true)
+            }
     }
 }
 
