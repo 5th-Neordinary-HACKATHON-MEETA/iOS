@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404042B11EA28004C6280 /* MainTabBarController.swift */; };
+		320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404062B11EB5B004C6280 /* HomeViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CD2B11B77F00686A9B /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320404042B11EA28004C6280 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		320404062B11EB5B004C6280 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
 				DDBC30CD2B11B77F00686A9B /* ViewController.swift */,
+				320404042B11EA28004C6280 /* MainTabBarController.swift */,
+				320404062B11EB5B004C6280 /* HomeViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -255,11 +261,13 @@
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
 				DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */,
 				DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */,
+				320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */,
 				DDC62A892B11E3E7008974A7 /* UIScrollView+.swift in Sources */,
 				DDC62A7A2B11C767008974A7 /* Token.swift in Sources */,
 				DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */,
 				DDC62A772B11C573008974A7 /* APIConstant.swift in Sources */,
 				DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */,
+				320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */,
 				DDC62A8D2B11E40F008974A7 /* UIColor+.swift in Sources */,
 				DDC62A8B2B11E3FB008974A7 /* UIImage+.swift in Sources */,
 				DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */,
