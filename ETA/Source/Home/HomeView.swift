@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var showSheet = false
     @State private var showAlert = false
+    @State private var networkError = false
     @State private var showTimeSheet = false
 
 
@@ -89,7 +90,7 @@ struct HomeView: View {
                             .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
                             .padding(.bottom, 16).padding(.top, 70)
                     }).fullScreenCover(isPresented: $showSheet, content: {
-                        MakingTeamView(showSheet: $showSheet, showAlert: $showAlert)
+                        MakingTeamView(showSheet: $showSheet, showAlert: $showAlert, networkError: $networkError)
                     })
                     
                         
@@ -113,7 +114,7 @@ struct HomeView: View {
                             .cornerRadius(20)
                             .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
                     }).fullScreenCover(isPresented: $showTimeSheet, content: {
-                        CustomAcceptAlertView()
+                        CustomAcceptAlertView().presentationBackground(Color.black.opacity(0.4))
                     })
                     
                     Spacer().frame(height: 220)

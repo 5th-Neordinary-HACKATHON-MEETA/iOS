@@ -15,6 +15,8 @@
 		320404122B1274D1004C6280 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404112B1274D1004C6280 /* HideKeyboardExtension.swift */; };
 		320404142B127925004C6280 /* AcceptTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404132B127925004C6280 /* AcceptTimeView.swift */; };
 		320404162B127F4E004C6280 /* CustomAcceptAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */; };
+		3204041D2B1290C2004C6280 /* NewTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204041C2B1290C2004C6280 /* NewTeamModel.swift */; };
+		3204041F2B12967F004C6280 /* NetworkErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204041E2B12967F004C6280 /* NetworkErrorAlertView.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
@@ -40,6 +42,7 @@
 		DD8B80B22B12702400DAA68B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = DD8B80B12B12702400DAA68B /* FirebaseAppCheck */; };
 		DD8B80B42B12702400DAA68B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = DD8B80B32B12702400DAA68B /* FirebaseMessaging */; };
 		DD8B80B72B1285CC00DAA68B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80B62B1285CC00DAA68B /* TeamTableViewCell.swift */; };
+		DD8B80BA2B1297D900DAA68B /* AnnouncementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80B92B1297D900DAA68B /* AnnouncementModel.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30D62B11B78100686A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */; };
@@ -71,6 +74,8 @@
 		320404112B1274D1004C6280 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		320404132B127925004C6280 /* AcceptTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTimeView.swift; sourceTree = "<group>"; };
 		320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAcceptAlertView.swift; sourceTree = "<group>"; };
+		3204041C2B1290C2004C6280 /* NewTeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamModel.swift; sourceTree = "<group>"; };
+		3204041E2B12967F004C6280 /* NetworkErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAlertView.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		DD8B80982B126ED600DAA68B /* MyTeamDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamDetailVC.swift; sourceTree = "<group>"; };
 		DD8B80A32B126F3200DAA68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD8B80B62B1285CC00DAA68B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		DD8B80B92B1297D900DAA68B /* AnnouncementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementModel.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320404172B128F71004C6280 /* NewTeam */ = {
+			isa = PBXGroup;
+			children = (
+				3204041B2B1290A1004C6280 /* Model */,
+				320404112B1274D1004C6280 /* HideKeyboardExtension.swift */,
+				3204040D2B12583D004C6280 /* CustomAlertView.swift */,
+				3204040F2B126370004C6280 /* AlertView.swift */,
+				3204040A2B123C71004C6280 /* MakingTeamView.swift */,
+				3204041E2B12967F004C6280 /* NetworkErrorAlertView.swift */,
+			);
+			path = NewTeam;
+			sourceTree = "<group>";
+		};
+		320404192B128FB8004C6280 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				320404062B11EB5B004C6280 /* HomeViewController.swift */,
+				320404082B121BE6004C6280 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3204041A2B128FD8004C6280 /* AcceptTime */ = {
+			isa = PBXGroup;
+			children = (
+				320404132B127925004C6280 /* AcceptTimeView.swift */,
+				320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */,
+			);
+			path = AcceptTime;
+			sourceTree = "<group>";
+		};
+		3204041B2B1290A1004C6280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3204041C2B1290C2004C6280 /* NewTeamModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		94F2CB9B2B11E64F00DC2527 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +245,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DD8B80B82B1297B800DAA68B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B80B92B1297D900DAA68B /* AnnouncementModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DDBC30BD2B11B77F00686A9B = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +286,9 @@
 		DDC62A6F2B11C3F3008974A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3204041A2B128FD8004C6280 /* AcceptTime */,
+				320404192B128FB8004C6280 /* Home */,
+				320404172B128F71004C6280 /* NewTeam */,
 				DD8B808F2B126ED600DAA68B /* MyTeam */,
 				94F2CBA02B12168A00DC2527 /* NewMeeting */,
 				DDC62A902B12165B008974A7 /* TabBarController.swift */,
@@ -240,14 +296,6 @@
 				DDC62A942B121691008974A7 /* Main */,
 				94F2CB9B2B11E64F00DC2527 /* Login */,
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
-				320404062B11EB5B004C6280 /* HomeViewController.swift */,
-				320404132B127925004C6280 /* AcceptTimeView.swift */,
-				320404082B121BE6004C6280 /* HomeView.swift */,
-				320404112B1274D1004C6280 /* HideKeyboardExtension.swift */,
-				3204040A2B123C71004C6280 /* MakingTeamView.swift */,
-				3204040F2B126370004C6280 /* AlertView.swift */,
-				3204040D2B12583D004C6280 /* CustomAlertView.swift */,
-				320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -314,6 +362,7 @@
 		DDC62A9A2B1216CC008974A7 /* Notice */ = {
 			isa = PBXGroup;
 			children = (
+				DD8B80B82B1297B800DAA68B /* Model */,
 				DDC62A9B2B1216DC008974A7 /* NoticeVC.swift */,
 				DD8B80B52B1285B600DAA68B /* Cell */,
 			);
@@ -426,6 +475,7 @@
 				DD8B80B72B1285CC00DAA68B /* TeamTableViewCell.swift in Sources */,
 				DD8B809B2B126ED700DAA68B /* PreviousMeetTableViewCell.swift in Sources */,
 				320404142B127925004C6280 /* AcceptTimeView.swift in Sources */,
+				3204041D2B1290C2004C6280 /* NewTeamModel.swift in Sources */,
 				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,
 				DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */,
 				94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */,
@@ -440,6 +490,7 @@
 				94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */,
 				DDC62A8D2B11E40F008974A7 /* UIColor+.swift in Sources */,
 				DDC62A992B1216C7008974A7 /* MainVC.swift in Sources */,
+				DD8B80BA2B1297D900DAA68B /* AnnouncementModel.swift in Sources */,
 				94F2CBC82B12799700DC2527 /* LoginModel.swift in Sources */,
 				DDC62A8B2B11E3FB008974A7 /* UIImage+.swift in Sources */,
 				320404102B126370004C6280 /* AlertView.swift in Sources */,
@@ -448,6 +499,7 @@
 				DDC62A752B11C564008974A7 /* APIModel.swift in Sources */,
 				94F2CBCD2B129F9100DC2527 /* NewMeeting.swift in Sources */,
 				320404092B121BE6004C6280 /* HomeView.swift in Sources */,
+				3204041F2B12967F004C6280 /* NetworkErrorAlertView.swift in Sources */,
 				DD8B809D2B126ED700DAA68B /* VotedTeamMemberCollectionViewCell.swift in Sources */,
 				DD8B80992B126ED700DAA68B /* EmptyMeetVC.swift in Sources */,
 			);
@@ -592,7 +644,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ETA/ETA.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DF5SKQK2R;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -622,7 +675,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ETA/ETA.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DF5SKQK2R;
 				GENERATE_INFOPLIST_FILE = YES;
