@@ -104,6 +104,15 @@ extension MyTeamVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    // TODO: 일정 유무와 시간 설정 유무에 따라 분기 처리 필요
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let NextVC = MyTeamDetailVC()
+        
+        NextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(NextVC, animated: true)
+    }
 }
 
 import SwiftUI

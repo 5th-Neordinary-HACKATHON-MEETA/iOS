@@ -56,6 +56,7 @@ class WaitTimeSelectVC: UIViewController {
     var meetButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         $0.tintColor = gray05
+        $0.addTarget(self, action: #selector(didMeetButtonTapped), for: .touchUpInside)
     }
     
     var votedInfoLabel: UILabel = UILabel().then {
@@ -128,6 +129,7 @@ class WaitTimeSelectVC: UIViewController {
         $0.titleLabel?.font = subTitle01
         $0.layer.backgroundColor = primary?.cgColor
         $0.layer.cornerRadius = 12
+        $0.addTarget(self, action: #selector(didMakeMeetButtonTapped), for: .touchUpInside)
     }
     
 
@@ -290,7 +292,28 @@ class WaitTimeSelectVC: UIViewController {
     // MARK: Function
     
     @objc func didPostNewNoticeButtonTapped() {
-        // self.present(URLView, animated: true, completion: nil)
+        let nextVC = AddNewMeetingViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true)
+    }
+    
+    @objc func didMakeMeetButtonTapped() {
+        let noticePopUpVC = NewNoticePopUpVC()
+        
+        noticePopUpVC.view.backgroundColor = .black.withAlphaComponent(0.5)
+        noticePopUpVC.modalTransitionStyle = .crossDissolve
+        noticePopUpVC.modalPresentationStyle = .overFullScreen
+        
+        self.present(noticePopUpVC, animated: true)
+    }
+    
+    @objc func didMeetButtonTapped() {
+        let selectTimeVC = AddMeetingDateViewController()
+        
+        selectTimeVC.modalPresentationStyle = .fullScreen
+        
+        self.present(selectTimeVC, animated: true)
     }
 }
 

@@ -122,6 +122,7 @@ class MyTeamDetailVC: UIViewController {
         $0.titleLabel?.font = subTitle01
         $0.layer.backgroundColor = primary?.cgColor
         $0.layer.cornerRadius = 12
+        $0.addTarget(self, action: #selector(didNewMeetButtonTapped), for: .touchUpInside)
     }
     
 
@@ -266,7 +267,20 @@ class MyTeamDetailVC: UIViewController {
     // MARK: Function
     
     @objc func didPostNewNoticeButtonTapped() {
-        // self.present(URLView, animated: true, completion: nil)
+        let noticePopUpVC = NewNoticePopUpVC()
+        
+        noticePopUpVC.view.backgroundColor = .black.withAlphaComponent(0.5)
+        noticePopUpVC.modalTransitionStyle = .crossDissolve
+        noticePopUpVC.modalPresentationStyle = .overFullScreen
+        
+        self.present(noticePopUpVC, animated: true)
+    }
+    
+    @objc func didNewMeetButtonTapped() {
+        let nextVC = AddNewMeetingViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true)
     }
 }
 

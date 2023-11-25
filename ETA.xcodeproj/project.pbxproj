@@ -145,10 +145,10 @@
 			children = (
 				DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */,
 				DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */,
-				DD8B80922B126ED600DAA68B /* Cell */,
 				DD8B80962B126ED600DAA68B /* WaitTimeSelectVC.swift */,
 				DD8B80972B126ED600DAA68B /* MyTeamVC.swift */,
 				DD8B80982B126ED600DAA68B /* MyTeamDetailVC.swift */,
+				DD8B80922B126ED600DAA68B /* Cell */,
 			);
 			path = MyTeam;
 			sourceTree = "<group>";
