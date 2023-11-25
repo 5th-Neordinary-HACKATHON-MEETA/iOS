@@ -118,6 +118,36 @@ class MyTeamTableViewCell: UITableViewCell {
             $0.bottom.equalToSuperview().offset(-30)
         }
     }
+    
+    func configure(title: String, howManyMember: Int, startedAt: String, endedAt: String) {
+        teamNameLabel.text = title
+        teamMemberCountLabel.text = String(howManyMember)
+        if let formattedTimeRange = formatTimeRange(startedAt: startedAt, endedAt: endedAt) {
+            let date = formatTimeRange(startedAt: startedAt, endedAt: endedAt)
+            dateButton.setTitle(date, for: .normal)
+        } else {
+            print("날짜 형식 변환 실패")
+        }
+    }
+    
+    func formatTimeRange(startedAt: String, endedAt: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR") // 한국 로케일 설정
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+        if let startDate = dateFormatter.date(from: startedAt),
+           let endDate = dateFormatter.date(from: endedAt) {
+
+            dateFormatter.dateFormat = "yyyy.MM.dd a h:mm"
+            let formattedStartDate = dateFormatter.string(from: startDate)
+            let formattedEndDate = dateFormatter.string(from: endDate)
+
+            return "\(formattedStartDate) ~ \(formattedEndDate)"
+        }
+
+        return nil
+    }
+    
 }
 
 

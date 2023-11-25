@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // FCM에 필요한 코드
         registerRemoteNotification()
         
+        Messaging.messaging().token { token, error in
+            print("토큰 = \(token)")
+        }
+        
         return true
     }
     
