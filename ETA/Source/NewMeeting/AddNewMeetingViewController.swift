@@ -13,6 +13,7 @@ class AddNewMeetingViewController: UIViewController {
     
     var meetModel = MeetingRequestModel.self
     var teamId: Int?
+    var whatTime: Int = 0
     
     var previousButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
@@ -52,15 +53,12 @@ class AddNewMeetingViewController: UIViewController {
         $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
         $0.layer.cornerRadius = 10
-        //        $0.addTarget(self, action: #selector(didWhatTimeButtonTapped), for: .touchUpInside)
         $0.menu = UIMenu(children: [
             UIAction(title: "1시간", state: .on, handler: { _ in print("1시간")}),
             UIAction(title: "2시간", handler: { _ in print("2시간")}),
             UIAction(title: "3시간", handler: { _ in print("3시간")}),
             UIAction(title: "4시간", handler: { _ in print("4시간")}),
             UIAction(title: "5시간", handler: { _ in print("5시간")}),
-            
-            
         ])
         /// 터치하면 바로 메뉴 나오도록 설정
         $0.showsMenuAsPrimaryAction = true
@@ -175,6 +173,19 @@ class AddNewMeetingViewController: UIViewController {
     
     @objc func didCheckButtonTapped() {
         
+        APIManager.shared.postData(urlEndpointString: Constant.postMeet, responseDataType: APIModel<MeetingResponseModel>.self, requestDataType: MeetingRequestModel.self, parameter: MeetingRequestModel(name: meetSubjectTextField.text ?? "good", teamId: "임시", duration: changeTimeToInt()), completionHandler: {
+            response in
+            print(response.self)
+            self.dismiss(animated: true)
+        })
+        
+    }
+    
+    func changeTimeToInt() -> Int {
+        let x = whatTimeButton.currentTitle?.prefix(1)
+        let y = Int(x ?? "1")!
+        
+        return y
     }
     
     @objc func didPreButtonTapped() {

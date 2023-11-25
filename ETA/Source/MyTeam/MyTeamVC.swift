@@ -58,7 +58,6 @@ class MyTeamVC: UIViewController {
                 if let result = response?.result?.teams {
                     self.teams = result
                     self.myTeamTableView.reloadData()
-                    
                 }
             }
     }
