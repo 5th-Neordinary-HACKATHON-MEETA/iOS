@@ -143,10 +143,10 @@
 			children = (
 				DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */,
 				DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */,
-				DD8B80922B126ED600DAA68B /* Cell */,
 				DD8B80962B126ED600DAA68B /* WaitTimeSelectVC.swift */,
 				DD8B80972B126ED600DAA68B /* MyTeamVC.swift */,
 				DD8B80982B126ED600DAA68B /* MyTeamDetailVC.swift */,
+				DD8B80922B126ED600DAA68B /* Cell */,
 			);
 			path = MyTeam;
 			sourceTree = "<group>";
@@ -404,7 +404,6 @@
 				DDC62A992B1216C7008974A7 /* MainVC.swift in Sources */,
 				DDC62A8B2B11E3FB008974A7 /* UIImage+.swift in Sources */,
 				320404102B126370004C6280 /* AlertView.swift in Sources */,
-				DDC62A972B1216B3008974A7 /* MyTeamVC.swift in Sources */,
 				DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */,
 				DD8B80A02B126ED700DAA68B /* MyTeamDetailVC.swift in Sources */,
 				DDC62A752B11C564008974A7 /* APIModel.swift in Sources */,
