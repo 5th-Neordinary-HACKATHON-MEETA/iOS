@@ -127,7 +127,7 @@ class LoginViewController: UIViewController {
             $0.leading.equalTo(logoImageView)
         }
         idLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview().multipliedBy(0.9)
+            $0.centerY.equalToSuperview().multipliedBy(0.8)
             $0.leading.equalTo(logoImageView)
         }
         idTextField.snp.makeConstraints{
@@ -145,7 +145,7 @@ class LoginViewController: UIViewController {
             $0.height.equalTo(60)
         }
         loginButton.snp.makeConstraints{
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-10)
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
@@ -163,13 +163,19 @@ class LoginViewController: UIViewController {
         
         print("텍스트 변경 감지")
         print("text :", sender.text ?? "error")
-//        passwordConditionLabel.isHidden = false
         
-        if ((idTextField.text?.isEmpty) != nil) && ((passwordTextField.text?.isEmpty) != nil) {
+        // idTextField와 passwordTextField 모두 값이 비어 있지 않을 때 로그인 버튼 활성화
+        if !(idTextField.text?.isEmpty ?? true) && !(passwordTextField.text?.isEmpty ?? true) {
             loginButton.setTitleColor(.white, for: .normal)
             loginButton.backgroundColor = primary
             loginButton.isEnabled = true
+        } else {
+            // 둘 중 하나라도 비어 있으면 로그인 버튼 비활성화
+            loginButton.setTitleColor(gray07, for: .normal)
+            loginButton.backgroundColor = gray04
+            loginButton.isEnabled = false
         }
+        
         
     }//end of T'Fdid'Changed
     
