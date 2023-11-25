@@ -10,6 +10,7 @@
 		320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404062B11EB5B004C6280 /* HomeViewController.swift */; };
 		320404092B121BE6004C6280 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404082B121BE6004C6280 /* HomeView.swift */; };
 		3204040B2B123C71004C6280 /* MakingTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204040A2B123C71004C6280 /* MakingTeamView.swift */; };
+		3204040E2B12583D004C6280 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204040D2B12583D004C6280 /* CustomAlertView.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
@@ -45,6 +46,7 @@
 		320404062B11EB5B004C6280 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		320404082B121BE6004C6280 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3204040A2B123C71004C6280 /* MakingTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingTeamView.swift; sourceTree = "<group>"; };
+		3204040D2B12583D004C6280 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				320404062B11EB5B004C6280 /* HomeViewController.swift */,
 				320404082B121BE6004C6280 /* HomeView.swift */,
 				3204040A2B123C71004C6280 /* MakingTeamView.swift */,
+				3204040D2B12583D004C6280 /* CustomAlertView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3204040E2B12583D004C6280 /* CustomAlertView.swift in Sources */,
 				DDC62A9C2B1216DC008974A7 /* NoticeVC.swift in Sources */,
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
 				DDC62A912B12165B008974A7 /* TabBarController.swift in Sources */,
