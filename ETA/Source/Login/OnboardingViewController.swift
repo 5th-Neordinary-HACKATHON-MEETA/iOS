@@ -76,7 +76,7 @@ class OnboardingViewController: UIViewController {
     
     func setUpConstraint() {
         onboardingImageView.snp.makeConstraints{
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.edges.equalToSuperview()
         }
         
         loginButton.snp.makeConstraints{
@@ -96,8 +96,8 @@ class OnboardingViewController: UIViewController {
     
     @objc func didDoLoginButtonTapped() {
         print("로그인하기 버튼 탭")
-//        navigationController?.pushViewController(LoginViewController(), animated: true)
-        self.present(LoginViewController(), animated: true)
+        navigationController?.pushViewController(LoginViewController(), animated: true)
+//        self.present(LoginViewController(), animated: true)
     }
 
 }
