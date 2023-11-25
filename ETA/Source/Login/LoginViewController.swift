@@ -119,7 +119,7 @@ class LoginViewController: UIViewController {
     func setUpConstraint() {
         
         logoImageView.snp.makeConstraints{
-            $0.centerY.equalToSuperview().multipliedBy(0.3)
+            $0.centerY.equalTo(view.safeAreaLayoutGuide).multipliedBy(0.3)
             $0.leading.equalToSuperview().offset(20)
         }
         infoLabel.snp.makeConstraints{
@@ -155,7 +155,12 @@ class LoginViewController: UIViewController {
     // MARK: Function
 
     @objc func didLoginButtonTapped() {
+        // MARK: 일단 누르면 넘어가도록 설정
+        // API 연결할 때 수정
+        var tabBarController = TabBarController()
+        tabBarController.modalPresentationStyle = .fullScreen
         
+        self.present(tabBarController, animated: true)
     }
 
     //텍스트필드 값 변경 시 유효성 검사

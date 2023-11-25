@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        self.window?.rootViewController = OnboardingViewController()
+        let navigationController = UINavigationController(rootViewController: OnboardingViewController())
+        
+        navigationController.navigationBar.tintColor = .black
+        
+        self.window?.rootViewController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
