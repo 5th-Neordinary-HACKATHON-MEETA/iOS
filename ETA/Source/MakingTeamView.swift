@@ -10,6 +10,9 @@ import SwiftUI
 struct MakingTeamView: View {
     @State private var teamName = ""
     @State private var teamNumber = ""
+    @State var startDate = Date()
+    @State var endDate = Date()
+
     
     var body: some View {
         VStack {
@@ -75,48 +78,41 @@ struct MakingTeamView: View {
                 Spacer()
             }.padding(.top, 40)
             
-            HStack{
-                ZStack{
-                    Rectangle()
+            ZStack{
+                Rectangle()
                     .foregroundColor(.clear)
-                    .frame(width: 149, height: 58)
+                    .frame(width: 361, height: 58)
                     .background(.white)
                     .cornerRadius(10)
-                    
-                    Text("23년 11월 25일")
-                      .font(
-                        Font.custom("Pretendard Variable", size: 17)
-                          .weight(.medium)
-                      )
-                      .kerning(0.017)
-                      .foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14))
-                }.padding(.leading, 16)
-                Spacer()
-                // Subtitle1
-                Text("부터")
-                  .font(
-                    Font.custom("Pretendard Variable", size: 17)
-                      .weight(.bold)
-                  )
-                  .kerning(0.0255)
-                  .foregroundColor(Color(red: 0.74, green: 0.74, blue: 0.74))
-                Spacer()
+                HStack{
+                    Spacer()
 
-                ZStack{
-                    Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 149, height: 58)
-                    .background(.white)
-                    .cornerRadius(10)
+                    DatePicker(
+                        "",
+                        selection: $startDate,
+                        displayedComponents: [.date]
+                    ).environment(\.locale, Locale.init(identifier: "ko_KR")).foregroundColor(.clear).tint(Color(primary ?? .orange)).labelsHidden()              .colorMultiply(Color.white).font(Font.custom("Pretendard Variable", size: 17).weight(.medium)).kerning(0.017).foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14))
                     
-                    Text("23년 11월 26일")
-                      .font(
-                        Font.custom("Pretendard Variable", size: 17)
-                          .weight(.medium)
-                      )
-                      .kerning(0.017)
-                      .foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14))
-                }.padding(.trailing, 16)
+                    Spacer()
+                    // Subtitle1
+                    Text("~")
+                        .font(
+                            Font.custom("Pretendard Variable", size: 17)
+                                .weight(.bold)
+                        )
+                        .kerning(0.0255)
+                        .foregroundColor(Color(red: 0.74, green: 0.74, blue: 0.74))
+                    Spacer()
+                    
+                    DatePicker(
+                        "",
+                        selection: $endDate,
+                        in: startDate...,
+                        displayedComponents: [.date]
+                    ).environment(\.locale, Locale.init(identifier: "ko_KR")).foregroundColor(.clear).tint(Color(primary ?? .orange)).labelsHidden()              .colorMultiply(Color.white).font(Font.custom("Pretendard Variable", size: 17).weight(.medium)).kerning(0.017).foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14))
+                    Spacer()
+
+                }
             }.padding(.top, 16)
             
             
