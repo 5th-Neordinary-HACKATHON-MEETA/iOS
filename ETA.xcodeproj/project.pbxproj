@@ -115,7 +115,6 @@
 		DDC62A6F2B11C3F3008974A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
 				94F2CB9B2B11E64F00DC2527 /* Login */,
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
 				DDBC30CD2B11B77F00686A9B /* ViewController.swift */,
@@ -155,6 +154,7 @@
 		DDC62A7B2B11D6F6008974A7 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
