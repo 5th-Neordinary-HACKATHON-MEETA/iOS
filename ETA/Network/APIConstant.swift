@@ -15,6 +15,7 @@ struct Constant {
     
     static let getTeam = "/teams"
     
+    static let getAnnouncement = "/announcements"
     static let newTeam = "/teams"
     
 }

@@ -18,6 +18,7 @@ class MyTeamDetailVC: UIViewController {
     var previousButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         $0.tintColor = gray09
+        $0.addTarget(self, action: #selector(didPrevButtonTapped), for: .touchUpInside)
     }
     
     var teamNameLabel: UILabel = UILabel().then {
@@ -282,6 +283,10 @@ class MyTeamDetailVC: UIViewController {
         
         self.present(nextVC, animated: true)
     }
+    
+    @objc func didPrevButtonTapped() {
+        self.dismiss(animated: true)
+    }
 }
 
 
@@ -294,10 +299,17 @@ extension MyTeamDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = previousTableView.dequeueReusableCell(withIdentifier: PreviousMeetTableViewCell().cellID, for: indexPath) as! PreviousMeetTableViewCell
         
-        cell.selectionStyle = .none
         cell.backgroundColor = gray02
         
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = previousTableView.dequeueReusableCell(withIdentifier: PreviousMeetTableViewCell().cellID, for: indexPath) as! PreviousMeetTableViewCell
+        
+        cell.selectionStyle = .none
+    
     }
 }
 
