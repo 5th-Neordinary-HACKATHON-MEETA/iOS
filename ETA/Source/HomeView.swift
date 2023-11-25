@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showSheet = false
+    @State private var showAlert = false
+
+    @State private var showNavLinkOne = false
+
     let rows = [GridItem(.flexible())]
     let colors: [Color] = [.black, .blue, .brown, .cyan, .gray, .indigo, .mint, .yellow, .orange, .purple]
     var body: some View {
@@ -60,7 +65,9 @@ struct HomeView: View {
                             .cornerRadius(30).offset(y: 200)
                         
                     }
-                    NavigationLink(destination: MakingTeamView()){
+                    Button(action: {
+                        showSheet.toggle()
+                    }, label: {
                         HStack{
                             // H1
                             Text("팀 생성하기")
@@ -79,8 +86,11 @@ struct HomeView: View {
                             .cornerRadius(20)
                             .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
                             .padding(.bottom, 16).padding(.top, 70)
+                    }).fullScreenCover(isPresented: $showSheet, content: {
+                        MakingTeamView(showSheet: $showSheet, showAlert: $showAlert)
+                    })
+                    
                         
-                    }
                     
                     HStack(){
                         

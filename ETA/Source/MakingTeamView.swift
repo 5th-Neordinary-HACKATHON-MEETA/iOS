@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct MakingTeamView: View {
+    @Binding var showSheet: Bool
+    @Binding var showAlert: Bool
+
+    @Environment(\.presentationMode) var presentationMode
+    @State private var isDetailViewPresented = false
     @State private var teamName = ""
     @State private var teamNumber = ""
     @State var startDate = Date()
@@ -16,6 +21,17 @@ struct MakingTeamView: View {
     
     var body: some View {
         VStack {
+            
+            Text("팀 생성하기")
+            .font(
+            Font.custom("Pretendard Variable", size: 17)
+            .weight(.bold)
+            )
+            .kerning(0.0255)
+            .multilineTextAlignment(.center)
+            .foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14)).padding(.bottom, 38)
+        
+
             // Subtitle1
             HStack{
                 Text("새로운 팀의 이름을 알려주세요.")
@@ -26,7 +42,7 @@ struct MakingTeamView: View {
                   .kerning(0.0255)
                   .foregroundColor(Color(red: 0.14, green: 0.14, blue: 0.14)).padding(.leading, 20)
                 Spacer()
-            }.padding(.top, 30)
+            }.padding(.top, 10)
             ZStack{
                 Rectangle()
                 .foregroundColor(.clear)
@@ -118,7 +134,11 @@ struct MakingTeamView: View {
             
             Spacer()
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+               // self.isDetailViewPresented = true
+                showAlert.toggle()
+                //presentationMode.wrappedValue.dismiss()
+                }, label: {
                 HStack(alignment: .center, spacing: 10) { // Subtitle1
                     Text("완료")
                     .font(
@@ -131,9 +151,12 @@ struct MakingTeamView: View {
                 .padding(.horizontal, 158)
                 .padding(.vertical, 16)
                 .frame(width: 361, height: 52, alignment: .center)
-                .background(Color(red: 1, green: 0.44, blue: 0.07))
+                .background((teamName == "" || teamNumber == "") ? Color(gray04 ?? UIColor(red: 0.894, green: 0.894, blue: 0.894, alpha: 1)) : Color(red: 1, green: 0.44, blue: 0.07))
                 .cornerRadius(10)
-            }).padding(.bottom, 10)
+                }).padding(.bottom, 10).fullScreenCover(isPresented: $showAlert, content: {
+                    AlertView(showSheet: self.$showSheet, showAlert: $showAlert).presentationBackground(Color.black.opacity(0.4))
+                })
+                    
             
         }.background(Color(uiColor: gray02 ?? .gray)) .navigationBarBackButtonTitleHidden().navigationBarBackButtonHidden(true)
             .toolbar {
@@ -150,10 +173,6 @@ struct MakingTeamView: View {
                 }
             }
     }
-}
-
-#Preview {
-    MakingTeamView()
 }
 
 extension View {
@@ -188,3 +207,40 @@ struct NavigationBarBackButtonTitleHiddenModifier: ViewModifier {
       )
   }
 }
+
+// Extension to create a custom sheet modifier
+extension View {
+    func customSheet<SheetContent: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> SheetContent) -> some View {
+        self.modifier(CustomSheetViewModifier(isPresented: isPresented, content: content))
+    }
+}
+
+// Custom modifier to manage the presentation of the custom sheet view
+struct CustomSheetViewModifier<SheetContent: View>: ViewModifier {
+    @Binding var isPresented: Bool
+    let content: () -> SheetContent
+
+    func body(content: Content) -> some View {
+        content.overlay(
+            Group {
+                if isPresented {
+                    ZStack {
+                        Color.black.opacity(0.4)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                // Dismiss the sheet when tapping outside
+                                isPresented = false
+                            }
+
+                        self.content()
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.4)
+                            .background(Color.white)
+                            .cornerRadius(16)
+                            .padding()
+                    }
+                }
+            }
+        )
+    }
+}
+
