@@ -14,29 +14,21 @@ class HomeViewController: UIViewController {
     let infoLabel: UILabel = UILabel().then {
         $0.text = "밋타와 함께하는 즐거운 회의 시간 :)"
         $0.font = h1
-        $0.textColor = .black
+        $0.textColor = .white
         $0.numberOfLines = 2
     }
     let logoImageView: UIImageView = UIImageView().then {
-        $0.image = UIImage(named: "Logo")
+        $0.image = UIImage(named: "LogoGrey")
+        $0.contentMode = .scaleAspectFill
+    }
+    
+
+    let halfBackgroundView: UIImageView = UIImageView().then {
+        $0.image = UIImage(named: "OrangeGradient")
         $0.contentMode = .scaleAspectFit
     }
     
-    let halfBackgroundView: UIView = UIView().then {
-        $0.frame = CGRect(x: 0, y: 0, width: 393, height: 298)
-        
-    }
-    
-    let gradientLayer: CAGradientLayer = CAGradientLayer().then{
-        $0.colors = [UIColor(red: 1, green: 0.444, blue: 0.073, alpha: 1).cgColor,
-                     UIColor(red: 1, green: 0.722, blue: 0, alpha: 1).cgColor
-        ]
-        $0.locations = [0, 1]
-        $0.startPoint = CGPoint(x: 0.25, y: 0.5)
-        $0.endPoint = CGPoint(x: 0.75, y: 0.5)
-        $0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0.78, b: -1.29, c: 1.14, d: -0.01, tx: -0.22, ty: 0.73))
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,22 +43,35 @@ class HomeViewController: UIViewController {
             halfBackgroundView,
             logoImageView
         ].forEach { self.view.addSubview($0) }
+        
+        halfBackgroundView.addSubview(infoLabel)
+        halfBackgroundView.addSubview(logoImageView)
     }
             
             
     func setUpConstraint() {
+        halfBackgroundView.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(0)
+            $0.trailing.equalToSuperview().offset(0)
+            $0.top.equalToSuperview().offset(0)
+            $0.height.equalTo(298)
+
+        }
+        
+        logoImageView.snp.makeConstraints{
+            $0.width.equalTo(171)
+            $0.height.equalTo(141)
+            $0.trailing.equalToSuperview().offset(20)
+            $0.top.equalToSuperview().offset(71)
+        }
         
         infoLabel.snp.makeConstraints{
+            $0.top.equalTo(halfBackgroundView.snp.top).offset(30)
             $0.width.equalTo(179)
             $0.centerY.equalToSuperview().multipliedBy(0.3)
             $0.leading.equalToSuperview().offset(20)
         }
-        logoImageView.snp.makeConstraints{
-            $0.width.equalTo(94)
-            $0.height.equalTo(90)
-            $0.trailing.equalToSuperview().offset(0)
-            $0.top.equalToSuperview().offset(71)
-        }
+        
     }
             
             
