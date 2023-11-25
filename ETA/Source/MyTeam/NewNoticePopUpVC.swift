@@ -50,6 +50,8 @@ class NewNoticePopUpVC: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = primary
         $0.isEnabled = false
+        $0.layer.cornerRadius = 8
+        $0.addTarget(self, action: #selector(didUploadButtonTapped), for: .touchUpInside)
     }
     
 
@@ -133,7 +135,13 @@ class NewNoticePopUpVC: UIViewController {
     
     // MARK: Function
     
+    /// x 버튼 눌렀을 때
     @objc func didPopButtonTapped() {
+        self.dismiss(animated: true)
+    }
+    
+    /// 확인 버튼 눌렀을 때
+    @objc func didUploadButtonTapped() {
         self.dismiss(animated: true)
     }
 }
