@@ -17,6 +17,8 @@ struct MakingTeamView: View {
     @State private var teamNumber = ""
     @State var startDate = Date()
     @State var endDate = Date()
+    
+    @Binding var networkError: Bool
 
     
     var body: some View {
@@ -135,10 +137,21 @@ struct MakingTeamView: View {
             Spacer()
             
             Button(action: {
-               // self.isDetailViewPresented = true
                 if(teamName != "" && teamNumber != ""){
-                    showAlert.toggle()
+                    APIManager.shared.postData(urlEndpointString: Constant.postAuthLogin, responseDataType: APIModel<newTeamResponse>.self, requestDataType: newTeamRequest.self, parameter: newTeamRequest(name: teamName, maxMember: Int(teamNumber) ?? 2, startedAt: formatDateToString(date: startDate), endedAt: formatDateToString(date: endDate)), completionHandler: {
+                        response in
+                        print(response.self)
+                        if response.isSuccess ?? false {
+                            showAlert.toggle()
+                            print("NEW TEAM API 성공")
+                        }
+                        else{//로그인 실패시
+                            networkError.toggle()
+                            print("NEW TEAM API 실패")
 
+                        }
+                    })
+                    
                 }
                 //presentationMode.wrappedValue.dismiss()
                 }, label: {
@@ -158,6 +171,8 @@ struct MakingTeamView: View {
                 .cornerRadius(10)
                 }).padding(.bottom, 10).fullScreenCover(isPresented: $showAlert, content: {
                     AlertView(showSheet: self.$showSheet, showAlert: $showAlert).presentationBackground(Color.black.opacity(0.4))
+                }).fullScreenCover(isPresented: $networkError, content: {
+                    AlertView(showSheet: self.$showSheet, showAlert: $networkError).presentationBackground(Color.black.opacity(0.4))
                 })
                     
             
@@ -178,6 +193,15 @@ struct MakingTeamView: View {
             }
     }
 }
+func formatDateToString(date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.string(from: date)
+}
+
+
+
+
 
 extension View {
 
