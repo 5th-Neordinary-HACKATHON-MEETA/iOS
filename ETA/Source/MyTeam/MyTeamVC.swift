@@ -54,6 +54,7 @@ class MyTeamVC: UIViewController {
             responseDataType: APIModel<teamResponseModel>?.self,
             requestDataType: teamRequestModel.self,
             parameter: nil) { response in
+                print(response?.result)
                 if let result = response?.result?.teams {
                     self.teams = result
                     self.myTeamTableView.reloadData()

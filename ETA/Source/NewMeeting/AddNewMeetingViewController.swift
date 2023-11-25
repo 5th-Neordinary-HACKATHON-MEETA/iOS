@@ -11,6 +11,9 @@ class AddNewMeetingViewController: UIViewController {
     
     // MARK: Variables
     
+    var meetModel = MeetingRequestModel.self
+    var teamId: Int?
+    
     let meetSubjectLabel: UILabel = UILabel().then{
         $0.text = "새로운 회의의 주제를 알려주세요."
         $0.font = subTitle01
