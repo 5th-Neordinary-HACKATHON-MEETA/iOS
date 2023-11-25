@@ -98,7 +98,6 @@ class OnboardingViewController: UIViewController {
         print("로그인하기 버튼 탭")
         
         navigationController?.pushViewController(LoginViewController(), animated: true)
-//        self.present(LoginViewController(), animated: true)
     }
 
 }
