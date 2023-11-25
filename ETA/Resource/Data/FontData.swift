@@ -14,6 +14,7 @@ import UIKit
 var h1 = UIFont(name: "PretendardVariable-Bold", size: 20)
 var subTitle01 = UIFont(name: "PretendardVariable-Bold", size: 17)
 var subTitle02 = UIFont(name: "PretendardVariable-Bold", size: 14)
+var subTitle03 = UIFont(name: "PretendardVariable-Medium", size: 17)
 var body01 = UIFont(name: "PretendardVariable-Medium", size: 14)
 var body02 = UIFont(name: "PretendardVariable-Bold", size: 12)
 var body03 = UIFont(name: "PretendardVariable-Medium", size: 12)
