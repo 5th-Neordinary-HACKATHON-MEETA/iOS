@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @State private var showSheet = false
     @State private var showAlert = false
+    @State private var showTimeSheet = false
+
 
     @State private var showNavLinkOne = false
 
@@ -91,23 +93,29 @@ struct HomeView: View {
                     })
                     
                         
+                    Button(action: {
+                        showTimeSheet.toggle()
+                    }, label: {
+                        HStack(){
+                            
+                            Text("ETA를 가장 잘 활용하는 방법은 ?")
+                                .font(
+                                    Font.custom("Pretendard Variable", size: 20)
+                                        .weight(.bold)
+                                )
+                                .kerning(0.02)
+                                .foregroundColor(.black).padding(.leading, 26)
+                            Spacer()
+                            
+                        }.foregroundColor(.clear)
+                            .frame(width: 360, height: 90)
+                            .background(.white)
+                            .cornerRadius(20)
+                            .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
+                    }).fullScreenCover(isPresented: $showTimeSheet, content: {
+                        CustomAcceptAlertView()
+                    })
                     
-                    HStack(){
-                        
-                        Text("ETA를 가장 잘 활용하는 방법은 ?")
-                            .font(
-                                Font.custom("Pretendard Variable", size: 20)
-                                    .weight(.bold)
-                            )
-                            .kerning(0.02)
-                            .foregroundColor(.black).padding(.leading, 26)
-                        Spacer()
-                        
-                    }.foregroundColor(.clear)
-                        .frame(width: 360, height: 90)
-                        .background(.white)
-                        .cornerRadius(20)
-                        .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
                     Spacer().frame(height: 220)
                     
                 }.frame(width: .infinity)
