@@ -11,6 +11,9 @@
 		320404092B121BE6004C6280 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404082B121BE6004C6280 /* HomeView.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
+		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
+		94F2CBA72B1220C100DC2527 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */; };
+		94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30D32B11B78100686A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBC30D22B11B78100686A9B /* Assets.xcassets */; };
@@ -25,7 +28,6 @@
 		DDC62A772B11C573008974A7 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A762B11C573008974A7 /* APIConstant.swift */; };
 		DDC62A7A2B11C767008974A7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A792B11C767008974A7 /* Token.swift */; };
 		DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A7D2B11D95D008974A7 /* ColorData.swift */; };
-		DDC62A802B11DAE4008974A7 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */; };
 		DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A812B11DFF2008974A7 /* FontData.swift */; };
 		DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A862B11E3A4008974A7 /* UIViewController+.swift */; };
 		DDC62A892B11E3E7008974A7 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A882B11E3E7008974A7 /* UIScrollView+.swift */; };
@@ -43,6 +45,9 @@
 		320404082B121BE6004C6280 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
+		94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetingDateViewController.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		DDC62A762B11C573008974A7 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		DDC62A792B11C767008974A7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DDC62A7D2B11D95D008974A7 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
-		DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
 		DDC62A812B11DFF2008974A7 /* FontData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontData.swift; sourceTree = "<group>"; };
 		DDC62A862B11E3A4008974A7 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		DDC62A882B11E3E7008974A7 /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		94F2CBA02B12168A00DC2527 /* NewMeeting */ = {
+			isa = PBXGroup;
+			children = (
+				94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */,
+				94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */,
+			);
+			path = NewMeeting;
+			sourceTree = "<group>";
+		};
 		DDBC30BD2B11B77F00686A9B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		DDC62A6F2B11C3F3008974A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				94F2CBA02B12168A00DC2527 /* NewMeeting */,
 				DDC62A902B12165B008974A7 /* TabBarController.swift */,
 				DDC62A9A2B1216CC008974A7 /* Notice */,
 				DDC62A952B121699008974A7 /* MyTeam */,
@@ -169,7 +183,7 @@
 		DDC62A7B2B11D6F6008974A7 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
+				94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 				DDC62A642B11B812008974A7 /* XCRemoteSwiftPackageReference "Then" */,
 				DDC62A672B11B81C008974A7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				DDC62A6C2B11B843008974A7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				94F2CBA32B121FA800DC2527 /* XCRemoteSwiftPackageReference "SwiftyMenu" */,
 			);
 			productRefGroup = DDBC30C72B11B77F00686A9B /* Products */;
 			projectDirPath = "";
@@ -292,7 +307,7 @@
 			files = (
 				DDBC30D62B11B78100686A9B /* LaunchScreen.storyboard in Resources */,
 				DDBC30D32B11B78100686A9B /* Assets.xcassets in Resources */,
-				DDC62A802B11DAE4008974A7 /* PretendardVariable.ttf in Resources */,
+				94F2CBA72B1220C100DC2527 /* PretendardVariable.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,10 +321,12 @@
 				DDC62A9C2B1216DC008974A7 /* NoticeVC.swift in Sources */,
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
 				DDC62A912B12165B008974A7 /* TabBarController.swift in Sources */,
+				94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */,
 				DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */,
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
 				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,
 				DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */,
+				94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */,
 				DDC62A892B11E3E7008974A7 /* UIScrollView+.swift in Sources */,
 				DDC62A7A2B11C767008974A7 /* Token.swift in Sources */,
 				DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */,
@@ -538,6 +555,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		94F2CBA32B121FA800DC2527 /* XCRemoteSwiftPackageReference "SwiftyMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KarimEbrahemAbdelaziz/SwiftyMenu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		DDC62A612B11B807008974A7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
