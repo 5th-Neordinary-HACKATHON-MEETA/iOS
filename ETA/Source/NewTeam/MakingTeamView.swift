@@ -138,7 +138,7 @@ struct MakingTeamView: View {
             
             Button(action: {
                 if(teamName != "" && teamNumber != ""){
-                    APIManager.shared.postData(urlEndpointString: Constant.postAuthLogin, responseDataType: APIModel<newTeamResponse>.self, requestDataType: newTeamRequest.self, parameter: newTeamRequest(name: teamName, maxMember: Int(teamNumber) ?? 2, startedAt: formatDateToString(date: startDate), endedAt: formatDateToString(date: endDate)), completionHandler: {
+                    APIManager.shared.postData(urlEndpointString: Constant.newTeam, responseDataType: APIModel<newTeamResponse>.self, requestDataType: newTeamRequest.self, parameter: newTeamRequest(name: teamName, maxMember: teamNumber, startedAt: formatDateToString(date: startDate), endedAt: formatDateToString(date: endDate)), completionHandler: {
                         response in
                         print(response.self)
                         if response.isSuccess ?? false {

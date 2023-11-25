@@ -11,7 +11,7 @@ import Foundation
 
 struct newTeamRequest: Codable {
     let name: String
-    let maxMember: Int
+    let maxMember: String
     let startedAt: String
     let endedAt: String
 }
