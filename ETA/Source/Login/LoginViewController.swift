@@ -120,10 +120,10 @@ class LoginViewController: UIViewController {
         
         logoImageView.snp.makeConstraints{
             $0.centerY.equalTo(view.safeAreaLayoutGuide).multipliedBy(0.3)
-            $0.leading.equalToSuperview().offset(20)
+            $0.leading.equalToSuperview().offset(16)
         }
         infoLabel.snp.makeConstraints{
-            $0.top.equalTo(logoImageView.snp.bottom).offset(30)
+            $0.top.equalTo(logoImageView.snp.bottom).offset(19)
             $0.leading.equalTo(logoImageView)
         }
         idLabel.snp.makeConstraints {
@@ -132,16 +132,16 @@ class LoginViewController: UIViewController {
         }
         idTextField.snp.makeConstraints{
             $0.top.equalTo(idLabel.snp.bottom).offset(15)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.leading.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(60)
         }
         passwordLabel.snp.makeConstraints{
-            $0.top.equalTo(idTextField.snp.bottom).offset(30)
+            $0.top.equalTo(idTextField.snp.bottom).offset(39)
             $0.leading.equalTo(logoImageView)
         }
         passwordTextField.snp.makeConstraints{
             $0.top.equalTo(passwordLabel.snp.bottom).offset(15)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.leading.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(60)
         }
         loginButton.snp.makeConstraints{
