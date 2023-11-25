@@ -13,6 +13,8 @@ struct Constant {
     
     static let postAuthLogin = "/auth/login"
     
+    static let getTeam = "/team"
+    
 }
 
 

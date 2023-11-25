@@ -14,6 +14,8 @@ class MyTeamVC: UIViewController {
     
     // MARK: Variable
     
+    var teams = [team]()
+    
     var logoImageView: UIImageView = UIImageView().then {
         $0.image = UIImage(named: "LogoOrange")
         $0.contentMode = .scaleAspectFit
@@ -39,10 +41,25 @@ class MyTeamVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUPApi()
         setUpUI()
         setUpLayout()
         setUpConstraint()
         setUpDelegate()
+    }
+    
+    func setUPApi() {
+        APIManager.shared.getData(
+            urlEndpointString: Constant.getTeam,
+            responseDataType: APIModel<teamResponseModel>?.self,
+            requestDataType: teamRequestModel.self,
+            parameter: nil) { response in
+                if let result = response?.result?.teams {
+                    self.teams = result
+                    self.myTeamTableView.reloadData()
+                    
+                }
+            }
     }
     
     private func setUpUI() {
@@ -92,15 +109,22 @@ class MyTeamVC: UIViewController {
 /// 리뷰 목록 구현을 위한 Delegate와 DataSource 구현
 extension MyTeamVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if teams.count != 0 {
+            return teams.count
+        }
+        return 0
     }
     
     /// 데이터 삽입 구현
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTeamTableView.dequeueReusableCell(withIdentifier: MyTeamTableViewCell().cellID, for: indexPath) as! MyTeamTableViewCell
         
-        cell.selectionStyle = .none
-        cell.backgroundColor = gray02
+        
+//        cell.backgroundColor = gray02
+        if !(teams.isEmpty) {
+            let team = teams[indexPath.row]
+            cell.configure(title: team.name, howManyMember: team.maxMember, startedAt: team.startedAt, endedAt: team.endedAt)
+        }
         
         return cell
     }
