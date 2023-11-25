@@ -42,6 +42,7 @@
 		DD8B80B42B12702400DAA68B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = DD8B80B32B12702400DAA68B /* FirebaseMessaging */; };
 		DD8B80B72B1285CC00DAA68B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80B62B1285CC00DAA68B /* TeamTableViewCell.swift */; };
 		DD8B80BA2B1297D900DAA68B /* AnnouncementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80B92B1297D900DAA68B /* AnnouncementModel.swift */; };
+		DD8B80BC2B12A3E100DAA68B /* AnnounceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80BB2B12A3E100DAA68B /* AnnounceModel.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30D62B11B78100686A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */; };
@@ -94,6 +95,7 @@
 		DD8B80A32B126F3200DAA68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD8B80B62B1285CC00DAA68B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		DD8B80B92B1297D900DAA68B /* AnnouncementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementModel.swift; sourceTree = "<group>"; };
+		DD8B80BB2B12A3E100DAA68B /* AnnounceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceModel.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				94F2CBCA2B12857800DC2527 /* TeamModel.swift */,
+				DD8B80BB2B12A3E100DAA68B /* AnnounceModel.swift */,
 			);
 			path = TeamModel;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
 				DD8B80B72B1285CC00DAA68B /* TeamTableViewCell.swift in Sources */,
 				DD8B809B2B126ED700DAA68B /* PreviousMeetTableViewCell.swift in Sources */,
+				DD8B80BC2B12A3E100DAA68B /* AnnounceModel.swift in Sources */,
 				320404142B127925004C6280 /* AcceptTimeView.swift in Sources */,
 				3204041D2B1290C2004C6280 /* NewTeamModel.swift in Sources */,
 				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,

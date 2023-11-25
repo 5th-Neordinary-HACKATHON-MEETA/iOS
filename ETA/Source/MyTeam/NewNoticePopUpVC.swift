@@ -142,6 +142,13 @@ class NewNoticePopUpVC: UIViewController {
     
     /// 확인 버튼 눌렀을 때
     @objc func didUploadButtonTapped() {
+        
+//        APIManager.shared.postData(
+//            urlEndpointString: Constant.postAnnouncement,
+//            responseDataType: <#T##Decodable.Protocol#>,
+//            requestDataType: <#T##(Decodable & Encodable).Protocol#>,
+//            parameter: <#T##(Decodable & Encodable)?#>,
+//            completionHandler: <#T##(Decodable) -> Void#>)
         self.dismiss(animated: true)
     }
 }
