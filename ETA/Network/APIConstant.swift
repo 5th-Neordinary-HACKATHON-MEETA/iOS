@@ -9,7 +9,12 @@ import Foundation
 
 
 struct Constant {
-    static let baseURL = ""
+    static let baseURL = "https://eta.jinhy.uk"
+    
+    static let postAuthLogin = "/auth/login"
+    
+    static let getTeam = "/team"
+    
 }
 
 

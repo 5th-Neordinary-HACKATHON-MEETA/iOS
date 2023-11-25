@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     let infoLabel: UILabel = UILabel().then{
-        $0.text = "어서오세요! 밋타의 행성에서 \n즐거운 회의 되세요 :)"
+        $0.text = "어서오세요! ETA에서 회의 일정을\n한번에 관리하세요 :)"
         $0.font = h1
         $0.textColor = .black
         $0.numberOfLines = 2
@@ -55,6 +55,7 @@ class LoginViewController: UIViewController {
         $0.layer.cornerRadius = 12
         $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         $0.leftViewMode = .always
+        $0.isSecureTextEntry = true
     }
     
     var loginButton: UIButton = UIButton().then {
@@ -66,6 +67,13 @@ class LoginViewController: UIViewController {
         $0.titleLabel?.font = subTitle01
         $0.layer.cornerRadius = 10
         $0.addTarget(self, action: #selector(didLoginButtonTapped), for: .touchUpInside)
+    }
+    
+    let loginfailLabel: UILabel = UILabel().then{
+        $0.text = "로그인에 실패하였습니다."
+        $0.font = subTitle03
+        $0.textColor = .red
+        $0.isHidden = true
     }
     
     // MARK: viewDidLoad()
@@ -101,7 +109,8 @@ class LoginViewController: UIViewController {
             idTextField,
             passwordLabel,
             passwordTextField,
-            loginButton
+            loginButton,
+            loginfailLabel
         ].forEach { self.view.addSubview($0) }
         
         
@@ -149,18 +158,33 @@ class LoginViewController: UIViewController {
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
+        loginfailLabel.snp.makeConstraints{
+            $0.bottom.equalTo(loginButton.snp.top).offset(-10)
+            $0.centerX.equalToSuperview()
+        }
         
     }
     
     // MARK: Function
 
     @objc func didLoginButtonTapped() {
-        // MARK: 일단 누르면 넘어가도록 설정
-        // API 연결할 때 수정
-        var tabBarController = TabBarController()
-        tabBarController.modalPresentationStyle = .fullScreen
         
-        self.present(tabBarController, animated: true)
+        APIManager.shared.postData(urlEndpointString: Constant.postAuthLogin, responseDataType: APIModel<LoginResponseModel>.self, requestDataType: LoginRequestModel.self, parameter: LoginRequestModel(id: idTextField.text!, password: passwordTextField.text!), completionHandler: {
+            response in
+            print(response.self)
+            if response.isSuccess ?? false {    //로그인 성공시
+                self.loginfailLabel.isHidden = true
+                var tabBarController = TabBarController()
+                tabBarController.modalPresentationStyle = .fullScreen
+                
+                self.present(tabBarController, animated: true)
+            }
+            else{//로그인 실패시
+                self.loginfailLabel.isHidden = false
+            }
+        })
+        
+
     }
 
     //텍스트필드 값 변경 시 유효성 검사

@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let navigationController = UINavigationController(rootViewController: TabBarController())
+        let navigationController = UINavigationController(rootViewController: OnboardingViewController())
         
         navigationController.navigationBar.tintColor = .black
         
