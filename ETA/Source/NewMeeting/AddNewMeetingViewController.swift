@@ -11,6 +11,18 @@ class AddNewMeetingViewController: UIViewController {
     
     // MARK: Variables
     
+    var previousButton: UIButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        $0.tintColor = gray09
+        $0.addTarget(self, action: #selector(didPreButtonTapped), for: .touchUpInside)
+    }
+    
+    var teamNameLabel: UILabel = UILabel().then {
+        $0.font = subTitle01
+        $0.text = "새 회의 만들기"
+        $0.textColor = gray09
+    }
+    
     let meetSubjectLabel: UILabel = UILabel().then{
         $0.text = "새로운 회의의 주제를 알려주세요."
         $0.font = subTitle01
@@ -96,6 +108,8 @@ class AddNewMeetingViewController: UIViewController {
     
     func setUpLayout() {
         [
+            previousButton,
+            teamNameLabel,
             meetSubjectTextField,
             meetSubjectLabel,
             whatTimeLabel,
@@ -115,8 +129,17 @@ class AddNewMeetingViewController: UIViewController {
     // MARK: Constraint
     
     func setUpConstraint() {
+        previousButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(64)
+            $0.left.equalToSuperview().offset(16)
+        }
+        
+        teamNameLabel.snp.makeConstraints {
+            $0.centerY.equalTo(previousButton)
+            $0.centerX.equalToSuperview()
+        }
         meetSubjectLabel.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.top.equalTo(previousButton.snp.bottom).offset(38)
             $0.leading.equalToSuperview().offset(20)
         }
         meetSubjectTextField.snp.makeConstraints{
@@ -149,6 +172,10 @@ class AddNewMeetingViewController: UIViewController {
     
     @objc func didCheckButtonTapped() {
         
+    }
+    
+    @objc func didPreButtonTapped() {
+        self.dismiss(animated: true)
     }
     
     //텍스트필드 값 변경 시 유효성 검사
