@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404042B11EA28004C6280 /* MainTabBarController.swift */; };
 		320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404062B11EB5B004C6280 /* HomeViewController.swift */; };
+		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
+		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CD2B11B77F00686A9B /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		320404042B11EA28004C6280 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		320404062B11EB5B004C6280 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94F2CB9B2B11E64F00DC2527 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */,
+				94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DDBC30BD2B11B77F00686A9B = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,8 @@
 		DDC62A6F2B11C3F3008974A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
+				94F2CB9B2B11E64F00DC2527 /* Login */,
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
 				DDBC30CD2B11B77F00686A9B /* ViewController.swift */,
 				320404042B11EA28004C6280 /* MainTabBarController.swift */,
@@ -146,7 +161,6 @@
 		DDC62A7B2B11D6F6008974A7 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
 				DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */,
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
+				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,
 				DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */,
 				DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */,
 				320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */,
@@ -268,6 +283,7 @@
 				DDC62A772B11C573008974A7 /* APIConstant.swift in Sources */,
 				DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */,
 				320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */,
+				94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */,
 				DDC62A8D2B11E40F008974A7 /* UIColor+.swift in Sources */,
 				DDC62A8B2B11E3FB008974A7 /* UIImage+.swift in Sources */,
 				DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */,
