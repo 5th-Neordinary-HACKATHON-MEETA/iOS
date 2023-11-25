@@ -23,6 +23,7 @@
 		DDC62A7A2B11C767008974A7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A792B11C767008974A7 /* Token.swift */; };
 		DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A7D2B11D95D008974A7 /* ColorData.swift */; };
 		DDC62A802B11DAE4008974A7 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */; };
+		DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A812B11DFF2008974A7 /* FontData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DDC62A792B11C767008974A7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DDC62A7D2B11D95D008974A7 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		DDC62A812B11DFF2008974A7 /* FontData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DDC62A7D2B11D95D008974A7 /* ColorData.swift */,
+				DDC62A812B11DFF2008974A7 /* FontData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
+				DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */,
 				DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */,
 				DDC62A7A2B11C767008974A7 /* Token.swift in Sources */,
 				DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */,
