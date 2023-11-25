@@ -24,6 +24,7 @@
 		94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */; };
 		94F2CBC82B12799700DC2527 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBC72B12799700DC2527 /* LoginModel.swift */; };
 		94F2CBCB2B12857900DC2527 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBCA2B12857800DC2527 /* TeamModel.swift */; };
+		94F2CBCD2B129F9100DC2527 /* NewMeeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBCC2B129F9100DC2527 /* NewMeeting.swift */; };
 		DD8B80992B126ED700DAA68B /* EmptyMeetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */; };
 		DD8B809A2B126ED700DAA68B /* NewNoticePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */; };
 		DD8B809B2B126ED700DAA68B /* PreviousMeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B80932B126ED600DAA68B /* PreviousMeetTableViewCell.swift */; };
@@ -85,6 +86,7 @@
 		94F2CBB92B124FE000DC2527 /* ETA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ETA.entitlements; sourceTree = "<group>"; };
 		94F2CBC72B12799700DC2527 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		94F2CBCA2B12857800DC2527 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		94F2CBCC2B129F9100DC2527 /* NewMeeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMeeting.swift; sourceTree = "<group>"; };
 		DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyMeetVC.swift; sourceTree = "<group>"; };
 		DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoticePopUpVC.swift; sourceTree = "<group>"; };
 		DD8B80932B126ED600DAA68B /* PreviousMeetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousMeetTableViewCell.swift; sourceTree = "<group>"; };
@@ -206,20 +208,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		94F2CBC92B12855D00DC2527 /* TeamModel */ = {
+		94F2CBC92B12855D00DC2527 /* MyTeamModel */ = {
 			isa = PBXGroup;
 			children = (
 				94F2CBCA2B12857800DC2527 /* TeamModel.swift */,
 				DD8B80BB2B12A3E100DAA68B /* AnnounceModel.swift */,
 				DD8B80BD2B12AC6300DAA68B /* TeamInfoModel.swift */,
+				94F2CBCC2B129F9100DC2527 /* NewMeeting.swift */,
 			);
-			path = TeamModel;
+			path = MyTeamModel;
 			sourceTree = "<group>";
 		};
 		DD8B808F2B126ED600DAA68B /* MyTeam */ = {
 			isa = PBXGroup;
 			children = (
-				94F2CBC92B12855D00DC2527 /* TeamModel */,
+				94F2CBC92B12855D00DC2527 /* MyTeamModel */,
 				DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */,
 				DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */,
 				DD8B80962B126ED600DAA68B /* WaitTimeSelectVC.swift */,
@@ -502,6 +505,7 @@
 				DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */,
 				DD8B80A02B126ED700DAA68B /* MyTeamDetailVC.swift in Sources */,
 				DDC62A752B11C564008974A7 /* APIModel.swift in Sources */,
+				94F2CBCD2B129F9100DC2527 /* NewMeeting.swift in Sources */,
 				320404092B121BE6004C6280 /* HomeView.swift in Sources */,
 				3204041F2B12967F004C6280 /* NetworkErrorAlertView.swift in Sources */,
 				DD8B809D2B126ED700DAA68B /* VotedTeamMemberCollectionViewCell.swift in Sources */,
