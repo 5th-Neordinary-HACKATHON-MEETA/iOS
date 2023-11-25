@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        self.window?.rootViewController = ViewController()
+        self.window?.rootViewController = OnboardingViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
