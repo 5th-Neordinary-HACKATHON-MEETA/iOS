@@ -102,7 +102,7 @@ struct HomeView: View {
                     
                 }.frame(width: .infinity)
             }
-        }
+        }.background(Color(uiColor: gray02 ?? .gray))
     }
 
     struct CollectionViewCell: View {

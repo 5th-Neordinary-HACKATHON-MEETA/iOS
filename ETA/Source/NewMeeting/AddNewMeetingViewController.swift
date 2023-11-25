@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftyMenu
 
 class AddNewMeetingViewController: UIViewController {
     
