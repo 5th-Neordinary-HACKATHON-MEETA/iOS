@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SwiftyMenu
 
 class AddNewMeetingViewController: UIViewController {
-
+    
     // MARK: Variables
     
     let meetSubjectLabel: UILabel = UILabel().then{
@@ -29,9 +30,46 @@ class AddNewMeetingViewController: UIViewController {
         $0.font = subTitle01
     }
     
-//    var whatTimeButton: UIButton = UIButton().then{
-//        
-//    }
+    let whatTimeButton: UIButton = UIButton().then{
+        $0.setTitle("1시간", for: .normal)
+        $0.setTitleColor(gray09, for: .normal)
+        $0.backgroundColor = .white
+        $0.contentHorizontalAlignment = .left
+        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        
+        $0.layer.cornerRadius = 10
+        //        $0.addTarget(self, action: #selector(didWhatTimeButtonTapped), for: .touchUpInside)
+        $0.menu = UIMenu(children: [
+            UIAction(title: "1시간", state: .on, handler: { _ in print("거리순")}),
+            UIAction(title: "2시간", handler: { _ in print("리뷰순")}),
+            UIAction(title: "3시간", handler: { _ in print("평점순")}),
+            UIAction(title: "4시간", handler: { _ in print("평점순")}),
+            UIAction(title: "5시간", handler: { _ in print("평점순")}),
+            
+            
+        ])
+        /// 터치하면 바로 메뉴 나오도록 설정
+        $0.showsMenuAsPrimaryAction = true
+        /// 체크 표시 하나만 할 수 있도록 설정
+        $0.changesSelectionAsPrimaryAction = true
+    }
+    
+    let arrowImageView: UIImageView = UIImageView().then{
+        $0.image = UIImage(named: "icon-arrow-decrease-mono")
+        $0.isUserInteractionEnabled = false
+    }
+    
+    var checkButton: UIButton = UIButton().then {
+        $0.setTitle("확인", for: .normal)
+        $0.setTitleColor(gray07, for: .normal)
+        $0.backgroundColor = gray04
+        $0.isEnabled = false
+        
+        $0.titleLabel?.font = subTitle01
+        $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(didCheckButtonTapped), for: .touchUpInside)
+    }
+    
     
     
     // MARK: viewDidLoad()
@@ -39,10 +77,12 @@ class AddNewMeetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                setUpView()
-                setUpLayout()
-                setUpConstraint()
+        setUpView()
+        setUpLayout()
+        setUpConstraint()
         //setUpDelegate()
+        self.meetSubjectTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+
     }
     
     
@@ -57,8 +97,12 @@ class AddNewMeetingViewController: UIViewController {
     
     func setUpLayout() {
         [
-        meetSubjectTextField,
-        meetSubjectLabel,
+            meetSubjectTextField,
+            meetSubjectLabel,
+            whatTimeLabel,
+            whatTimeButton,
+            arrowImageView,
+            checkButton
         ].forEach{ view.addSubview($0) }
     }
     
@@ -78,15 +122,56 @@ class AddNewMeetingViewController: UIViewController {
         }
         meetSubjectTextField.snp.makeConstraints{
             $0.height.equalTo(58)
-            $0.top.equalTo(meetSubjectLabel.snp.bottom).offset(10)
+            $0.top.equalTo(meetSubjectLabel.snp.bottom).offset(16)
             $0.horizontalEdges.equalToSuperview().inset(15)
         }
+        whatTimeLabel.snp.makeConstraints{
+            $0.leading.equalTo(meetSubjectLabel)
+            $0.top.equalTo(meetSubjectTextField.snp.bottom).offset(30)
+        }
+        whatTimeButton.snp.makeConstraints{
+            $0.top.equalTo(whatTimeLabel.snp.bottom).offset(16)
+            $0.horizontalEdges.equalToSuperview().inset(15)
+            $0.height.equalTo(58)
+        }
+        arrowImageView.snp.makeConstraints{
+            $0.centerY.equalTo(whatTimeButton)
+            $0.trailing.equalTo(whatTimeButton.snp.trailing).inset(20)
+        }
+        checkButton.snp.makeConstraints{
+            $0.bottom.equalToSuperview().inset(42)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.height.equalTo(52)
+        }
+        
     }
     
     // MARK: Function
-
-
+    
+    @objc func didCheckButtonTapped() {
+        
+    }
+    
+    //텍스트필드 값 변경 시 유효성 검사
+    @objc func TFdidChanged(_ sender: UITextField) {
+        
+        print("텍스트 변경 감지")
+        print("text :", sender.text ?? "error")
+        
+        // idTextField와 passwordTextField 모두 값이 비어 있지 않을 때 로그인 버튼 활성화
+        if !(meetSubjectTextField.text?.isEmpty ?? true) {
+            checkButton.setTitleColor(.white, for: .normal)
+            checkButton.backgroundColor = primary
+            checkButton.isEnabled = true
+        } else {
+            // 둘 중 하나라도 비어 있으면 로그인 버튼 비활성화
+            checkButton.setTitleColor(gray07, for: .normal)
+            checkButton.backgroundColor = gray04
+            checkButton.isEnabled = false
+        }
+    }
 }
+
 
 import SwiftUI
 @available(iOS 16.0, *)
@@ -96,3 +181,4 @@ struct AddNewMeetingViewController_Preview: PreviewProvider {
             //.edgesIgnoringSafeArea(.all)
     }
 }
+
