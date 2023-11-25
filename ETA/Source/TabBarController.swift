@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         
         // MARK: Variables
         
-        let mainVC = MainVC()
+        let mainVC = HomeViewController()
         mainVC.tabBarItem.title = "홈"
         mainVC.tabBarItem.image = UIImage(named: "MainTab")
         mainVC.tabBarItem.selectedImage = UIImage(named: "MainTab")
