@@ -12,6 +12,7 @@
 		3204040B2B123C71004C6280 /* MakingTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204040A2B123C71004C6280 /* MakingTeamView.swift */; };
 		3204040E2B12583D004C6280 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204040D2B12583D004C6280 /* CustomAlertView.swift */; };
 		320404102B126370004C6280 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204040F2B126370004C6280 /* AlertView.swift */; };
+		320404122B1274D1004C6280 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404112B1274D1004C6280 /* HideKeyboardExtension.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
@@ -63,6 +64,7 @@
 		3204040A2B123C71004C6280 /* MakingTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingTeamView.swift; sourceTree = "<group>"; };
 		3204040D2B12583D004C6280 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		3204040F2B126370004C6280 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		320404112B1274D1004C6280 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
@@ -154,10 +156,10 @@
 			children = (
 				DD8B80902B126ED600DAA68B /* EmptyMeetVC.swift */,
 				DD8B80912B126ED600DAA68B /* NewNoticePopUpVC.swift */,
-				DD8B80922B126ED600DAA68B /* Cell */,
 				DD8B80962B126ED600DAA68B /* WaitTimeSelectVC.swift */,
 				DD8B80972B126ED600DAA68B /* MyTeamVC.swift */,
 				DD8B80982B126ED600DAA68B /* MyTeamDetailVC.swift */,
+				DD8B80922B126ED600DAA68B /* Cell */,
 			);
 			path = MyTeam;
 			sourceTree = "<group>";
@@ -215,6 +217,7 @@
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
 				320404062B11EB5B004C6280 /* HomeViewController.swift */,
 				320404082B121BE6004C6280 /* HomeView.swift */,
+				320404112B1274D1004C6280 /* HideKeyboardExtension.swift */,
 				3204040A2B123C71004C6280 /* MakingTeamView.swift */,
 				3204040F2B126370004C6280 /* AlertView.swift */,
 				3204040D2B12583D004C6280 /* CustomAlertView.swift */,
@@ -394,6 +397,7 @@
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
 				DD8B809F2B126ED700DAA68B /* MyTeamVC.swift in Sources */,
 				DDC62A912B12165B008974A7 /* TabBarController.swift in Sources */,
+				320404122B1274D1004C6280 /* HideKeyboardExtension.swift in Sources */,
 				94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */,
 				DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */,
 				DD8B809A2B126ED700DAA68B /* NewNoticePopUpVC.swift in Sources */,
