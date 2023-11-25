@@ -39,11 +39,11 @@ class AddNewMeetingViewController: UIViewController {
         $0.layer.cornerRadius = 10
         //        $0.addTarget(self, action: #selector(didWhatTimeButtonTapped), for: .touchUpInside)
         $0.menu = UIMenu(children: [
-            UIAction(title: "1시간", state: .on, handler: { _ in print("거리순")}),
-            UIAction(title: "2시간", handler: { _ in print("리뷰순")}),
-            UIAction(title: "3시간", handler: { _ in print("평점순")}),
-            UIAction(title: "4시간", handler: { _ in print("평점순")}),
-            UIAction(title: "5시간", handler: { _ in print("평점순")}),
+            UIAction(title: "1시간", state: .on, handler: { _ in print("1시간")}),
+            UIAction(title: "2시간", handler: { _ in print("2시간")}),
+            UIAction(title: "3시간", handler: { _ in print("3시간")}),
+            UIAction(title: "4시간", handler: { _ in print("4시간")}),
+            UIAction(title: "5시간", handler: { _ in print("5시간")}),
             
             
         ])
