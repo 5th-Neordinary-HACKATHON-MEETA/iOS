@@ -13,7 +13,7 @@ struct Constant {
     
     static let postAuthLogin = "/auth/login"
     
-    static let getTeam = "/team"
+    static let getTeam = "/teams"
     
     static let newTeam = "/teams"
     

@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 import Then
 
+import Alamofire
+
 class LoginViewController: UIViewController {
     
     // MARK: Variables
@@ -169,13 +171,18 @@ class LoginViewController: UIViewController {
 
     @objc func didLoginButtonTapped() {
         
+        
         APIManager.shared.postData(urlEndpointString: Constant.postAuthLogin, responseDataType: APIModel<LoginResponseModel>.self, requestDataType: LoginRequestModel.self, parameter: LoginRequestModel(id: idTextField.text!, password: passwordTextField.text!), completionHandler: {
             response in
             print(response.self)
+            
             if response.isSuccess ?? false {    //로그인 성공시
                 self.loginfailLabel.isHidden = true
                 var tabBarController = TabBarController()
                 tabBarController.modalPresentationStyle = .fullScreen
+                
+                /// 싱글톤에 jwt 객체 저장
+                
                 
                 self.present(tabBarController, animated: true)
             }
