@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404062B11EB5B004C6280 /* HomeViewController.swift */; };
+		320404092B121BE6004C6280 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404082B121BE6004C6280 /* HomeView.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320404062B11EB5B004C6280 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		320404082B121BE6004C6280 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,8 @@
 				DDC62A942B121691008974A7 /* Main */,
 				94F2CB9B2B11E64F00DC2527 /* Login */,
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
+				320404062B11EB5B004C6280 /* HomeViewController.swift */,
+				320404082B121BE6004C6280 /* HomeView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */,
 				DDC62A772B11C573008974A7 /* APIConstant.swift in Sources */,
 				DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */,
+				320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */,
 				94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */,
 				DDC62A8D2B11E40F008974A7 /* UIColor+.swift in Sources */,
 				DDC62A992B1216C7008974A7 /* MainVC.swift in Sources */,
@@ -316,6 +323,7 @@
 				DDC62A972B1216B3008974A7 /* MyTeamVC.swift in Sources */,
 				DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */,
 				DDC62A752B11C564008974A7 /* APIModel.swift in Sources */,
+				320404092B121BE6004C6280 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
