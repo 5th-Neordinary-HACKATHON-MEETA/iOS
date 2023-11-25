@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Token {
+    let jwtToken: String
+}
+
+// static let token = Token(jwtToken: <#String#>)
