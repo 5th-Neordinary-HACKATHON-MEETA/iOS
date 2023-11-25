@@ -104,6 +104,14 @@ extension MyTeamVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let NextVC = MyTeamDetailVC()
+        
+        NextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(NextVC, animated: true)
+    }
 }
 
 import SwiftUI
