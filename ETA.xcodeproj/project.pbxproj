@@ -10,7 +10,6 @@
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
-		94F2CBA52B121FA800DC2527 /* SwiftyMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 94F2CBA42B121FA800DC2527 /* SwiftyMenu */; };
 		94F2CBA72B1220C100DC2527 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */; };
 		94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
@@ -74,7 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC62A6E2B11B843008974A7 /* Alamofire in Frameworks */,
-				94F2CBA52B121FA800DC2527 /* SwiftyMenu in Frameworks */,
 				DDC62A692B11B81C008974A7 /* SnapKit in Frameworks */,
 				DDC62A632B11B807008974A7 /* Kingfisher in Frameworks */,
 				DDC62A662B11B812008974A7 /* Then in Frameworks */,
@@ -251,7 +249,6 @@
 				DDC62A682B11B81C008974A7 /* SnapKit */,
 				DDC62A6A2B11B81C008974A7 /* SnapKit-Dynamic */,
 				DDC62A6D2B11B843008974A7 /* Alamofire */,
-				94F2CBA42B121FA800DC2527 /* SwiftyMenu */,
 			);
 			productName = ETA;
 			productReference = DDBC30C62B11B77F00686A9B /* ETA.app */;
@@ -593,11 +590,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		94F2CBA42B121FA800DC2527 /* SwiftyMenu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 94F2CBA32B121FA800DC2527 /* XCRemoteSwiftPackageReference "SwiftyMenu" */;
-			productName = SwiftyMenu;
-		};
 		DDC62A622B11B807008974A7 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DDC62A612B11B807008974A7 /* XCRemoteSwiftPackageReference "Kingfisher" */;

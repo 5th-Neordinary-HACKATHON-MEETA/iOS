@@ -80,7 +80,7 @@ class OnboardingViewController: UIViewController {
         }
         
         loginButton.snp.makeConstraints{
-            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(52)
             $0.centerY.equalToSuperview().multipliedBy(1.2)
         }
@@ -88,7 +88,7 @@ class OnboardingViewController: UIViewController {
         joinButton.snp.makeConstraints{
             $0.horizontalEdges.equalTo(loginButton)
             $0.height.equalTo(loginButton)
-            $0.top.equalTo(loginButton.snp.bottom).offset(10)
+            $0.top.equalTo(loginButton.snp.bottom).offset(16)
         }
     }
     
