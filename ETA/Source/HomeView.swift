@@ -21,7 +21,7 @@ struct HomeView: View {
                             Button(action: {}, label: {
                                 Image("Bell").resizable().frame(width: 24, height: 28).padding(.trailing, 16)
                             })
-                        }.padding(.top, 10)
+                        }
                         HStack{
                             Text("ETA와 함께하는\n즐거운 회의 시간 :)")
                                 .font(
@@ -33,7 +33,7 @@ struct HomeView: View {
                             Spacer()
                             
                             Image("LogoGrey").padding(.trailing, 0)
-                        }.frame(width: .infinity, height: 170)
+                        }.frame(width: .infinity, height: 150)
                         Spacer()
                         
                         
@@ -48,7 +48,7 @@ struct HomeView: View {
                                 startPoint: UnitPoint(x: 0.35, y: 0.72),
                                 endPoint: UnitPoint(x: 1.13, y: -0.57)
                             )
-                        )
+                        ).frame(height: 290)
                 }
                 CollectionViewCell().offset(y: 100)
                 
@@ -60,9 +60,7 @@ struct HomeView: View {
             
             }
             
-            
-            Spacer()
-            HStack{
+                        HStack{
                 // H1
                 Text("팀 생성하기")
                     .font(
@@ -79,7 +77,7 @@ struct HomeView: View {
                 .background(.white)
                 .cornerRadius(20)
                 .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
-                .padding(.bottom, 16)
+                .padding(.bottom, 16).padding(.top, 70)
             
             HStack(){
                 
@@ -97,10 +95,7 @@ struct HomeView: View {
                 .background(.white)
                 .cornerRadius(20)
                 .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
-            Spacer()
-
-            Spacer()
-
+            Spacer().frame(height: 220)
             
         }.frame(width: .infinity)
     }

@@ -20,10 +20,9 @@ class HomeViewController: UIViewController {
         // Create a UIHostingController to embed the SwiftUI view
         let hostingController = UIHostingController(rootView: HomeView)
         
-        // Add the UIHostingController as a child view controller
         addChild(hostingController)
         view.addSubview(hostingController.view)
-        
+
         // Set constraints for the UIHostingController's view to fill the parent view
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -32,7 +31,12 @@ class HomeViewController: UIViewController {
             hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
+
+        // Ignore Safe Area
+        if #available(iOS 11.0, *) {
+            hostingController.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+
         hostingController.didMove(toParent: self)
         
     }

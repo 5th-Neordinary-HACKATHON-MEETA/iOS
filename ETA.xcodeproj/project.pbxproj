@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404042B11EA28004C6280 /* MainTabBarController.swift */; };
 		320404072B11EB5B004C6280 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404062B11EB5B004C6280 /* HomeViewController.swift */; };
 		320404092B121BE6004C6280 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404082B121BE6004C6280 /* HomeView.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		320404042B11EA28004C6280 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		320404062B11EB5B004C6280 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		320404082B121BE6004C6280 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +131,6 @@
 				DDC62A942B121691008974A7 /* Main */,
 				94F2CB9B2B11E64F00DC2527 /* Login */,
 				DDBC30D42B11B78100686A9B /* LaunchScreen.storyboard */,
-				DDBC30CD2B11B77F00686A9B /* ViewController.swift */,
-				320404042B11EA28004C6280 /* MainTabBarController.swift */,
 				320404062B11EB5B004C6280 /* HomeViewController.swift */,
 				320404082B121BE6004C6280 /* HomeView.swift */,
 			);
@@ -314,8 +310,6 @@
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
 				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,
 				DDC62A872B11E3A4008974A7 /* UIViewController+.swift in Sources */,
-				DDBC30CE2B11B77F00686A9B /* ViewController.swift in Sources */,
-				320404052B11EA28004C6280 /* MainTabBarController.swift in Sources */,
 				DDC62A892B11E3E7008974A7 /* UIScrollView+.swift in Sources */,
 				DDC62A7A2B11C767008974A7 /* Token.swift in Sources */,
 				DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */,
