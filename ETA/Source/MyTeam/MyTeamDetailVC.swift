@@ -15,6 +15,8 @@ class MyTeamDetailVC: UIViewController {
     
     // MARK: Variable
     
+    var previousMeet: [Info]?
+    
     var previousButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         $0.tintColor = gray09
@@ -292,12 +294,16 @@ class MyTeamDetailVC: UIViewController {
 
 extension MyTeamDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return previousMeet?.count ?? 0
     }
     
     /// 데이터 삽입 구현
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = previousTableView.dequeueReusableCell(withIdentifier: PreviousMeetTableViewCell().cellID, for: indexPath) as! PreviousMeetTableViewCell
+        
+        cell.meetLabel.text = previousMeet![indexPath.row].name
+        cell.teamMemberCountLabel.text = "\(previousMeet![indexPath.row].team.maxMember)명"
+        cell.dateLabel.text = previousMeet![indexPath.row].dateTime
         
         cell.backgroundColor = gray02
         
