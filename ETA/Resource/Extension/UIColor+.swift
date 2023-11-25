@@ -1,10 +1,9 @@
 //
-//  UIColor+.swift
-//  TodaySky
+//  UIColor.swift
+//  ETA
 //
-//  Created by YOUJIM on 10/26/23.
+//  Created by YOUJIM on 11/25/23.
 //
-
 
 import UIKit
 
