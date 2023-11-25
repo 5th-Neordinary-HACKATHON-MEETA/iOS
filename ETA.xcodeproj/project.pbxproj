@@ -12,6 +12,7 @@
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
 		94F2CBA52B121FA800DC2527 /* SwiftyMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 94F2CBA42B121FA800DC2527 /* SwiftyMenu */; };
 		94F2CBA72B1220C100DC2527 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */; };
+		94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */; };
 		DDBC30CA2B11B77F00686A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30C92B11B77F00686A9B /* AppDelegate.swift */; };
 		DDBC30CC2B11B77F00686A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */; };
 		DDBC30D32B11B78100686A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBC30D22B11B78100686A9B /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA62B1220C100DC2527 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetingDateViewController.swift; sourceTree = "<group>"; };
 		DDBC30C62B11B77F00686A9B /* ETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBC30C92B11B77F00686A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBC30CB2B11B77F00686A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */,
+				94F2CBAA2B12351600DC2527 /* AddMeetingDateViewController.swift */,
 			);
 			path = NewMeeting;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				DDC62A9C2B1216DC008974A7 /* NoticeVC.swift in Sources */,
 				DDC62A732B11C501008974A7 /* APIManager.swift in Sources */,
 				DDC62A912B12165B008974A7 /* TabBarController.swift in Sources */,
+				94F2CBAB2B12351600DC2527 /* AddMeetingDateViewController.swift in Sources */,
 				DDC62A822B11DFF2008974A7 /* FontData.swift in Sources */,
 				DDC62A8F2B11E433008974A7 /* UIView+.swift in Sources */,
 				94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */,
