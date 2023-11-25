@@ -136,7 +136,10 @@ struct MakingTeamView: View {
             
             Button(action: {
                // self.isDetailViewPresented = true
-                showAlert.toggle()
+                if(teamName != "" && teamNumber != ""){
+                    showAlert.toggle()
+
+                }
                 //presentationMode.wrappedValue.dismiss()
                 }, label: {
                 HStack(alignment: .center, spacing: 10) { // Subtitle1
@@ -158,7 +161,8 @@ struct MakingTeamView: View {
                 })
                     
             
-        }.background(Color(uiColor: gray02 ?? .gray)) .navigationBarBackButtonTitleHidden().navigationBarBackButtonHidden(true)
+        }.background(Color(uiColor: gray02 ?? .gray))
+            .onAppear (perform : UIApplication.shared.hideKeyboard).navigationBarBackButtonTitleHidden().navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     // Subtitle1
