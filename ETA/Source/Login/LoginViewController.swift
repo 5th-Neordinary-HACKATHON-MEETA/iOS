@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     
     // MARK: Variables
     
+    var loginButtonEnabled = false
+    
     let logoImageView: UIImageView = UIImageView().then {
         $0.image = UIImage(named: "LogoOrange")
         $0.contentMode = .scaleAspectFit
@@ -40,21 +42,29 @@ class LoginViewController: UIViewController {
     var idTextField: UITextField = UITextField().then{
         $0.placeholder = "아이디를 입력해주세요."
         $0.backgroundColor = .white
-//        $0.
+        $0.layer.cornerRadius = 12
+        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
+        $0.leftViewMode = .always
         $0.font = subTitle03
     }
     
     var passwordTextField: UITextField = UITextField().then{
         $0.placeholder = "비밀번호를 입력해주세요."
         $0.font = subTitle03
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 12
+        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
+        $0.leftViewMode = .always
     }
     
     var loginButton: UIButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
+        $0.setTitleColor(gray07, for: .normal)
+        $0.backgroundColor = gray04
+        $0.isEnabled = false
+        
         $0.titleLabel?.font = subTitle01
-        $0.backgroundColor = primary
-        $0.layer.cornerRadius = 8
+        $0.layer.cornerRadius = 10
         $0.addTarget(self, action: #selector(didLoginButtonTapped), for: .touchUpInside)
     }
     
@@ -66,6 +76,10 @@ class LoginViewController: UIViewController {
                 setUpView()
                 setUpLayout()
                 setUpConstraint()
+        
+        self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        
         //setUpDelegate()
     }
     
@@ -117,10 +131,24 @@ class LoginViewController: UIViewController {
             $0.leading.equalTo(logoImageView)
         }
         idTextField.snp.makeConstraints{
-            $0.top.equalTo(idLabel.snp.bottom).offset(10)
+            $0.top.equalTo(idLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
+        passwordLabel.snp.makeConstraints{
+            $0.top.equalTo(idTextField.snp.bottom).offset(30)
             $0.leading.equalTo(logoImageView)
         }
-        
+        passwordTextField.snp.makeConstraints{
+            $0.top.equalTo(passwordLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
+        loginButton.snp.makeConstraints{
+            $0.bottom.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.height.equalTo(50)
+        }
         
     }
     
@@ -130,6 +158,21 @@ class LoginViewController: UIViewController {
         
     }
 
+    //텍스트필드 값 변경 시 유효성 검사
+    @objc func TFdidChanged(_ sender: UITextField) {
+        
+        print("텍스트 변경 감지")
+        print("text :", sender.text ?? "error")
+//        passwordConditionLabel.isHidden = false
+        
+        if ((idTextField.text?.isEmpty) != nil) && ((passwordTextField.text?.isEmpty) != nil) {
+            loginButton.setTitleColor(.white, for: .normal)
+            loginButton.backgroundColor = primary
+            loginButton.isEnabled = true
+        }
+        
+    }//end of T'Fdid'Changed
+    
 }
 
 import SwiftUI
