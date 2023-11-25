@@ -18,6 +18,7 @@ class EmptyMeetVC: UIViewController {
     var previousButton: UIButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         $0.tintColor = gray09
+        $0.addTarget(self, action: #selector(didPreviousButtonTapped), for: .touchUpInside)
     }
     
     var teamNameLabel: UILabel = UILabel().then {
@@ -76,6 +77,7 @@ class EmptyMeetVC: UIViewController {
         $0.titleLabel?.font = subTitle01
         $0.layer.backgroundColor = primary?.cgColor
         $0.layer.cornerRadius = 12
+        $0.addTarget(self, action: #selector(didMeetButtonTapped), for: .touchUpInside)
     }
     
 
@@ -174,6 +176,17 @@ class EmptyMeetVC: UIViewController {
         noticePopUpVC.modalPresentationStyle = .overFullScreen
         
         self.present(noticePopUpVC, animated: true)
+    }
+    
+    @objc func didMeetButtonTapped() {
+        let nextVC = AddNewMeetingViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true)
+    }
+    
+    @objc func didPreviousButtonTapped() {
+        self.dismiss(animated: true)
     }
 }
 
