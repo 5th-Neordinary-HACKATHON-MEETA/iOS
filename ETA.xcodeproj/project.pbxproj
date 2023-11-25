@@ -22,6 +22,7 @@
 		DDC62A772B11C573008974A7 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A762B11C573008974A7 /* APIConstant.swift */; };
 		DDC62A7A2B11C767008974A7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A792B11C767008974A7 /* Token.swift */; };
 		DDC62A7E2B11D95D008974A7 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC62A7D2B11D95D008974A7 /* ColorData.swift */; };
+		DDC62A802B11DAE4008974A7 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DDC62A762B11C573008974A7 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		DDC62A792B11C767008974A7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DDC62A7D2B11D95D008974A7 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		DDC62A7B2B11D6F6008974A7 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				DDC62A7F2B11DAE4008974A7 /* PretendardVariable.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				DDBC30D62B11B78100686A9B /* LaunchScreen.storyboard in Resources */,
 				DDBC30D32B11B78100686A9B /* Assets.xcassets in Resources */,
+				DDC62A802B11DAE4008974A7 /* PretendardVariable.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
