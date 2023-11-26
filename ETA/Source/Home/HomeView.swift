@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+
+
 struct HomeView: View {
     @State private var showSheet = false
     @State private var showAlert = false
     @State private var networkError = false
     @State private var showTimeSheet = false
+    @State private var currentMeeting = MostCurrentMeeting(id: "123", name: "TEAM ETA", dateTime: "2023.11.28 18:00", duration: 4, location: "공덕", team: CurrentTeam(id: "ETA", name: "ETA", maxMember: 5, startedAt: "2023-02-25T10:52:58.000Z", endedAt: "2023-02-25T10:52:58.000Z")  )
+    @State private var teamNum = 2
 
 
     @State private var showNavLinkOne = false
@@ -59,7 +63,10 @@ struct HomeView: View {
                                     )
                                 ).frame(height: 290)
                         }
-                        CollectionViewCell().offset(y: 100)
+                        CollectionViewCell(currentMeeting: $currentMeeting, teamNum: $teamNum).offset(y: 100).onAppear {
+                            // 앱이 나타날 때 API 호출
+                            setUPApi()
+                        }
                         
                         Rectangle()
                             .foregroundColor(.clear)
@@ -122,16 +129,20 @@ struct HomeView: View {
                 }.frame(width: .infinity)
             }
         }.background(Color(uiColor: gray02 ?? .gray))
+        
+        
     }
 
     struct CollectionViewCell: View {
+        @Binding var currentMeeting: MostCurrentMeeting
+        @Binding var teamNum: Int
         var body: some View {
             VStack(alignment: .leading)
             {
                 
                 HStack{
                     // H1
-                    Text("TEAM MEETA")
+                    Text(currentMeeting.name)
                         .font(
                             Font.custom("Pretendard Variable", size: 20)
                                 .weight(.bold)
@@ -143,7 +154,7 @@ struct HomeView: View {
                 }.padding(.leading, 26)
                 
                 // Body2
-                Text("9명이 회의에 참여하고 있어요!")
+                Text("\(String(teamNum))명이 회의에 참여하고 있어요!")
                     .font(
                         Font.custom("Pretendard Variable", size: 12)
                             .weight(.bold)
@@ -161,7 +172,7 @@ struct HomeView: View {
                             .background(Color(red: 1, green: 0.44, blue: 0.07))
                             .cornerRadius(40)
                         // Body2
-                        Text("2023.11.28 오후 6시~9시")
+                        Text(formattedDate(from: convertStringToMeetingDate(currentMeeting.dateTime)) )
                             .font(
                                 Font.custom("Pretendard Variable", size: 12)
                                     .weight(.bold)
@@ -180,6 +191,54 @@ struct HomeView: View {
                 .shadow(color: Color(red: 0.2, green: 0.12, blue: 0.06).opacity(0.1), radius: 10, x: 5, y: 3)
         }
     }
+    func setUPApi() {
+        APIManager.shared.getData(
+            urlEndpointString: Constant.currentMeeting,
+            responseDataType: APIModel<CurrentMeetingRes>?.self,
+            requestDataType: teamRequestModel.self,
+            parameter: nil) { response in
+                print("response 결과값 \(response.self)")
+
+                if let result = response?.result?.result {
+                    DispatchQueue.main.async {
+                        self.currentMeeting = result.mostCurrentMeeting ??  MostCurrentMeeting(id: "123", name: "TEAM ETA", dateTime: "2023.11.28 18:00", duration: 4, location: "공덕", team: CurrentTeam(id: "ETA", name: "ETA", maxMember: 5, startedAt: "2023-02-25T10:52:58.000Z", endedAt: "2023-02-25T10:52:58.000Z")  )
+                        self.teamNum = result.numUsers ?? 2
+                    }
+                    
+                }
+            }
+    }
+}
+
+func convertStringToMeetingDate(_ dateString: String) -> Date {
+    let formatter = ISO8601DateFormatter()
+    let currentDate = Date()
+
+    // Calendar 객체 생성
+    let calendar = Calendar.current
+
+    // 현재 날짜의 년, 월, 일을 가져오기
+    let components = calendar.dateComponents([.year, .month, .day], from: currentDate)
+
+    // 오후 5시로 시간을 설정
+    var dateComponents = DateComponents()
+    dateComponents.year = components.year
+    dateComponents.month = components.month
+    dateComponents.day = components.day
+    dateComponents.hour = 17 // 24시간 형식에서는 17이 오후 5시를 나타냅니다.
+    dateComponents.minute = 0
+    dateComponents.second = 0
+
+    // Calendar를 사용하여 날짜와 시간 객체 생성
+    let afternoonFiveDate = calendar.date(from: dateComponents)
+    
+    return formatter.date(from: dateString) ?? afternoonFiveDate!
+}
+
+func formattedDate(from date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy.MM.dd a hh"
+    return formatter.string(from: date)
 }
 
 #Preview {

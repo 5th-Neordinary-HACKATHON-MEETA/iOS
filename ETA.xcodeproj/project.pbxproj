@@ -17,6 +17,7 @@
 		320404162B127F4E004C6280 /* CustomAcceptAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */; };
 		3204041D2B1290C2004C6280 /* NewTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204041C2B1290C2004C6280 /* NewTeamModel.swift */; };
 		3204041F2B12967F004C6280 /* NetworkErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204041E2B12967F004C6280 /* NetworkErrorAlertView.swift */; };
+		320404222B12A06A004C6280 /* CurrentMeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320404212B12A06A004C6280 /* CurrentMeetingModel.swift */; };
 		94F2CB9D2B11E66C00DC2527 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */; };
 		94F2CB9F2B12091400DC2527 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */; };
 		94F2CBA22B1216C600DC2527 /* AddNewMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */; };
@@ -74,6 +75,7 @@
 		320404152B127F4E004C6280 /* CustomAcceptAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAcceptAlertView.swift; sourceTree = "<group>"; };
 		3204041C2B1290C2004C6280 /* NewTeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamModel.swift; sourceTree = "<group>"; };
 		3204041E2B12967F004C6280 /* NetworkErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAlertView.swift; sourceTree = "<group>"; };
+		320404212B12A06A004C6280 /* CurrentMeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMeetingModel.swift; sourceTree = "<group>"; };
 		94F2CB9C2B11E66C00DC2527 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94F2CB9E2B12091400DC2527 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		94F2CBA12B1216C600DC2527 /* AddNewMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeetingViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		320404192B128FB8004C6280 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				320404202B12A055004C6280 /* Model */,
 				320404062B11EB5B004C6280 /* HomeViewController.swift */,
 				320404082B121BE6004C6280 /* HomeView.swift */,
 			);
@@ -169,6 +172,14 @@
 			isa = PBXGroup;
 			children = (
 				3204041C2B1290C2004C6280 /* NewTeamModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		320404202B12A055004C6280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				320404212B12A06A004C6280 /* CurrentMeetingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +494,7 @@
 				DD8B80A02B126ED700DAA68B /* MyTeamDetailVC.swift in Sources */,
 				DDC62A752B11C564008974A7 /* APIModel.swift in Sources */,
 				320404092B121BE6004C6280 /* HomeView.swift in Sources */,
+				320404222B12A06A004C6280 /* CurrentMeetingModel.swift in Sources */,
 				3204041F2B12967F004C6280 /* NetworkErrorAlertView.swift in Sources */,
 				DD8B809D2B126ED700DAA68B /* VotedTeamMemberCollectionViewCell.swift in Sources */,
 				DD8B80992B126ED700DAA68B /* EmptyMeetVC.swift in Sources */,
