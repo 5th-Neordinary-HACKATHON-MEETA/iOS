@@ -16,6 +16,8 @@ class NoticeVC: UIViewController {
 
     // MARK: Variables
     
+    var announces = [Announcements]()
+    
     var bellImage = UIImage(named: "Bell")
     
     var logoImageView: UIImageView = UIImageView().then {
@@ -61,7 +63,15 @@ class NoticeVC: UIViewController {
     func setUpView() {
         view.backgroundColor = gray02
         
-        bellImage?.withRenderingMode(.alwaysOriginal)
+        APIManager.shared.getData(
+            urlEndpointString: Constant.getAnnouncement,
+            responseDataType: APIModel<AnnouncementResponseModel>?.self,
+            requestDataType: AnnouncementRequestModel.self,
+            parameter: nil) { response in
+                self.announces = response?.result?.announcements ?? []
+                
+                self.teamTableView.reloadData()
+            }
     }
     
     
@@ -122,7 +132,7 @@ class NoticeVC: UIViewController {
 // 리뷰 목록 구현을 위한 Delegate와 DataSource 구현
 extension NoticeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return announces.count
     }
     
     /// 데이터 삽입 구현
@@ -131,6 +141,10 @@ extension NoticeVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.selectionStyle = .none
         cell.backgroundColor = gray02
+        
+        cell.authorLabel.text = announces[indexPath.row].nickname
+        cell.teamNameLabel.text = announces[indexPath.row].teamName
+        cell.noticeLabel.text = announces[indexPath.row].title
         
         return cell
     }

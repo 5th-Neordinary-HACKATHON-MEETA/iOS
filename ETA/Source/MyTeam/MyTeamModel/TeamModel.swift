@@ -18,6 +18,7 @@ struct team: Codable {
     let maxMember: Int
     let startedAt: String
     let endedAt: String
+    
 }
 
 struct teamRequestModel: Codable {

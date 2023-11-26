@@ -130,5 +130,29 @@ extension APIManager {
             }
             .resume()
     }
+    
+    func putData<T: Codable, U: Decodable>(urlEndpointString: String,
+                                            responseDataType: U.Type,
+                                            requestDataType: T.Type,
+                                            parameter: T?,
+                                            completionHandler: @escaping (U)->Void) {
+        
+        guard let url = URL(string: Constant.baseURL + urlEndpointString) else { return }
+        print("put 요청 URL --> \(url)")
+        print("Request 쿼리 --> \(parameter)")
+        
+        AF
+            .request(url, method: .put, parameters: parameter, encoder: .json, headers: self.headers)
+            .responseDecodable(of: U.self) { response in
+                //print(response)
+                switch response.result {
+                case .success(let success):
+                    completionHandler(success)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            .resume()
+    }
 }
 

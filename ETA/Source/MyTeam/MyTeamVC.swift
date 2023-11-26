@@ -54,10 +54,10 @@ class MyTeamVC: UIViewController {
             responseDataType: APIModel<teamResponseModel>?.self,
             requestDataType: teamRequestModel.self,
             parameter: nil) { response in
+                print(response?.result)
                 if let result = response?.result?.teams {
                     self.teams = result
                     self.myTeamTableView.reloadData()
-                    
                 }
             }
     }
@@ -129,13 +129,46 @@ extension MyTeamVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    // TODO: 일정 유무와 시간 설정 유무에 따라 분기 처리 필요
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let NextVC = MyTeamDetailVC()
         
-        NextVC.modalPresentationStyle = .fullScreen
+        var res: TeamInfoResponseModel?
         
-        self.present(NextVC, animated: true)
+        APIManager.shared.getData(
+            //urlEndpointString: "/teams/:\(teams[indexPath.row].id)",
+            urlEndpointString: "/teams/asdf",
+            responseDataType: APIModel<TeamInfoResponseModel>?.self,
+            requestDataType: TeamInfoRequestModel.self,
+            parameter: nil) { response in
+                print(response)
+                res = (response?.result)!
+                print(res)
+                
+                // 일정 유무와 시간 설정 유무에 따라 분기 처리
+                if self.teams.isEmpty {
+                    let NextVC = EmptyMeetVC()
+                    NextVC.modalPresentationStyle = .fullScreen
+                    self.present(NextVC, animated: true)
+                }
+                else if !self.teams.isEmpty && self.teams[indexPath.row].startedAt.isEmpty {
+                    let NextVC = WaitTimeSelectVC()
+                    NextVC.modalPresentationStyle = .fullScreen
+                    self.present(NextVC, animated: true)
+                }
+                else {
+                    let NextVC = MyTeamDetailVC()
+                    NextVC.modalPresentationStyle = .fullScreen
+                    print(res?.meets.meeting?.team.name)
+                    NextVC.teamNameLabel.text = res?.meets.meeting?.team.name
+                    NextVC.meetLabel.text = res?.meets.meeting?.name
+                    NextVC.teamMemberCountLabel.text = "\(res?.meets.meeting?.team.maxMember ?? 0)명"
+                    NextVC.dateButton.setTitle(res?.meets.meeting?.dateTime, for: UIControl.State.normal)
+                    NextVC.noticeContentLabel.text = res?.meets.previously[0].announcement?.content
+                    NextVC.previousMeet = res?.meets.previously
+                    
+                    self.present(NextVC, animated: true)
+                }
+            }
     }
 }
 

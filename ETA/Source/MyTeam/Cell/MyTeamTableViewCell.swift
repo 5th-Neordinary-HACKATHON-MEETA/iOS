@@ -121,7 +121,7 @@ class MyTeamTableViewCell: UITableViewCell {
     
     func configure(title: String, howManyMember: Int, startedAt: String, endedAt: String) {
         teamNameLabel.text = title
-        teamMemberCountLabel.text = String(howManyMember)
+        teamMemberCountLabel.text = String(howManyMember) + "명"
         if let formattedTimeRange = formatTimeRange(startedAt: startedAt, endedAt: endedAt) {
             let date = formatTimeRange(startedAt: startedAt, endedAt: endedAt)
             dateButton.setTitle(date, for: .normal)
@@ -138,11 +138,13 @@ class MyTeamTableViewCell: UITableViewCell {
         if let startDate = dateFormatter.date(from: startedAt),
            let endDate = dateFormatter.date(from: endedAt) {
 
-            dateFormatter.dateFormat = "yyyy.MM.dd a h:mm"
+            dateFormatter.dateFormat = "yyyy.MM.dd a h:m"
             let formattedStartDate = dateFormatter.string(from: startDate)
             let formattedEndDate = dateFormatter.string(from: endDate)
+            
+            
 
-            return "\(formattedStartDate) ~ \(formattedEndDate)"
+            return "\(formattedStartDate)"
         }
 
         return nil
