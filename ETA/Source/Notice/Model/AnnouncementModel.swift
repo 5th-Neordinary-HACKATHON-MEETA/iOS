@@ -9,7 +9,7 @@ import Foundation
 
 struct Announcements: Codable {
     let teamName: String?
-    let title: String?
+    let content: String?
     let nickname: String?
 }
 

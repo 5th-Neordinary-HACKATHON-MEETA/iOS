@@ -153,7 +153,7 @@ struct MakingTeamView: View {
                     })
                     
                 }
-                //presentationMode.wrappedValue.dismiss()
+                presentationMode.wrappedValue.dismiss()
                 }, label: {
                 HStack(alignment: .center, spacing: 10) { // Subtitle1
                     Text("완료")

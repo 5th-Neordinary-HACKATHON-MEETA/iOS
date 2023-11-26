@@ -158,17 +158,36 @@ extension MyTeamVC: UITableViewDelegate, UITableViewDataSource {
                 else {
                     let NextVC = MyTeamDetailVC()
                     NextVC.modalPresentationStyle = .fullScreen
-                    print(res?.meets.meeting?.team.name)
                     NextVC.teamNameLabel.text = res?.meets.meeting?.team.name
                     NextVC.meetLabel.text = res?.meets.meeting?.name
                     NextVC.teamMemberCountLabel.text = "\(res?.meets.meeting?.team.maxMember ?? 0)명"
-                    NextVC.dateButton.setTitle(res?.meets.meeting?.dateTime, for: UIControl.State.normal)
+                    
+                    let date = res?.meets.meeting?.dateTime
+                    
+                    NextVC.dateButton.setTitle(self.formatTimeRange(date: date!), for: UIControl.State.normal)
                     NextVC.noticeContentLabel.text = res?.meets.previously[0].announcement?.content
                     NextVC.previousMeet = res?.meets.previously
                     
                     self.present(NextVC, animated: true)
                 }
             }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func formatTimeRange(date: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR") // 한국 로케일 설정
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+        if let endDate = dateFormatter.date(from: date) {
+
+            dateFormatter.dateFormat = "yyyy.MM.dd a h:m"
+            let formattedEndDate = dateFormatter.string(from: endDate)
+
+            return "\(formattedEndDate)"
+        }
+
+        return nil
     }
 }
 
