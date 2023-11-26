@@ -95,6 +95,7 @@ class AddNewMeetingViewController: UIViewController {
         //setUpDelegate()
         self.meetSubjectTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
 
+        hideKeyboard()
     }
     
     
@@ -178,7 +179,7 @@ class AddNewMeetingViewController: UIViewController {
             print(response.self)
             self.dismiss(animated: true)
         })
-        
+        self.dismiss(animated: true)
     }
     
     func changeTimeToInt() -> Int {
