@@ -11,6 +11,22 @@ class AddNewMeetingViewController: UIViewController {
     
     // MARK: Variables
     
+    var meetModel = MeetingRequestModel.self
+    var teamId: Int?
+    var whatTime: Int = 0
+    
+    var previousButton: UIButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        $0.tintColor = gray09
+        $0.addTarget(self, action: #selector(didPreButtonTapped), for: .touchUpInside)
+    }
+    
+    var teamNameLabel: UILabel = UILabel().then {
+        $0.font = subTitle01
+        $0.text = "새 회의 만들기"
+        $0.textColor = gray09
+    }
+    
     let meetSubjectLabel: UILabel = UILabel().then{
         $0.text = "새로운 회의의 주제를 알려주세요."
         $0.font = subTitle01
@@ -37,15 +53,12 @@ class AddNewMeetingViewController: UIViewController {
         $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
         $0.layer.cornerRadius = 10
-        //        $0.addTarget(self, action: #selector(didWhatTimeButtonTapped), for: .touchUpInside)
         $0.menu = UIMenu(children: [
             UIAction(title: "1시간", state: .on, handler: { _ in print("1시간")}),
             UIAction(title: "2시간", handler: { _ in print("2시간")}),
             UIAction(title: "3시간", handler: { _ in print("3시간")}),
             UIAction(title: "4시간", handler: { _ in print("4시간")}),
             UIAction(title: "5시간", handler: { _ in print("5시간")}),
-            
-            
         ])
         /// 터치하면 바로 메뉴 나오도록 설정
         $0.showsMenuAsPrimaryAction = true
@@ -96,6 +109,8 @@ class AddNewMeetingViewController: UIViewController {
     
     func setUpLayout() {
         [
+            previousButton,
+            teamNameLabel,
             meetSubjectTextField,
             meetSubjectLabel,
             whatTimeLabel,
@@ -115,8 +130,17 @@ class AddNewMeetingViewController: UIViewController {
     // MARK: Constraint
     
     func setUpConstraint() {
+        previousButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(64)
+            $0.left.equalToSuperview().offset(16)
+        }
+        
+        teamNameLabel.snp.makeConstraints {
+            $0.centerY.equalTo(previousButton)
+            $0.centerX.equalToSuperview()
+        }
         meetSubjectLabel.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.top.equalTo(previousButton.snp.bottom).offset(38)
             $0.leading.equalToSuperview().offset(20)
         }
         meetSubjectTextField.snp.makeConstraints{
@@ -149,6 +173,23 @@ class AddNewMeetingViewController: UIViewController {
     
     @objc func didCheckButtonTapped() {
         
+        APIManager.shared.postData(urlEndpointString: Constant.postMeet, responseDataType: APIModel<MeetingResponseModel>.self, requestDataType: MeetingRequestModel.self, parameter: MeetingRequestModel(name: meetSubjectTextField.text ?? "good", teamId: "임시", duration: changeTimeToInt()), completionHandler: {
+            response in
+            print(response.self)
+            self.dismiss(animated: true)
+        })
+        
+    }
+    
+    func changeTimeToInt() -> Int {
+        let x = whatTimeButton.currentTitle?.prefix(1)
+        let y = Int(x ?? "1")!
+        
+        return y
+    }
+    
+    @objc func didPreButtonTapped() {
+        self.dismiss(animated: true)
     }
     
     //텍스트필드 값 변경 시 유효성 검사
