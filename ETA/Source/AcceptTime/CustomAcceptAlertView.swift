@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CustomAcceptAlertView: View {
+    @Environment(\.dismiss) var dismiss
     func setDefault() {
         for index in meets.indices {
             meets[index].selected = false
@@ -61,7 +62,7 @@ struct CustomAcceptAlertView: View {
                 
                 Spacer()
                 Button(action: {
-                    
+                    dismiss()
                 }, label: {
                     HStack(alignment: .center, spacing: 0) {
                         // Subtitle1
