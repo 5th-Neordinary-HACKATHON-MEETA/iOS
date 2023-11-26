@@ -18,6 +18,10 @@ struct Constant {
     static let newTeam = "/teams"
     static let postMeet = "/meetings"
     
+    static let currentMeeting = "/meetings/most-current"
+    
+    static let availableMeeting = "/meetings/available"
+    
     static let getAnnouncement = "/announcements"
     
     static let postAnnouncement = "/announcements"
