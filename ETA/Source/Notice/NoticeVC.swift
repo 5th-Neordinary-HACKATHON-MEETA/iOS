@@ -144,7 +144,7 @@ extension NoticeVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.authorLabel.text = announces[indexPath.row].nickname
         cell.teamNameLabel.text = announces[indexPath.row].teamName
-        cell.noticeLabel.text = announces[indexPath.row].title
+        cell.noticeLabel.text = announces[indexPath.row].content
         
         return cell
     }

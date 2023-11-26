@@ -90,6 +90,7 @@ class LoginViewController: UIViewController {
         self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
         self.passwordTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
         
+        hideKeyboard()
         //setUpDelegate()
     }
     
